@@ -1,0 +1,7 @@
+{
+  "name": "gamepass-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "R. A. Souza",
+  "license": "MIT"
+}
