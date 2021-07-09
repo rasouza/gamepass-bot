@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "R. A. Souza",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  }
 }
