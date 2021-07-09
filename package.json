@@ -1,11 +1,21 @@
 {
   "name": "gamepass-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "R. A. Souza",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
+    "axios": "^0.21.1",
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "filesize": "^6.4.0",
+    "winston": "^3.3.3",
+    "winston-dev-format": "^0.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.11"
   }
 }
