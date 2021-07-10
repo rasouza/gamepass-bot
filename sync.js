@@ -10,8 +10,8 @@ Logger.info('Sync started! Checking new games...');
 const sync = async () => {
   const catalog = await xbox.getCatalog()
   Object.keys(catalog).forEach(async id => {
-    const game = db.getGameById(id)
-
+    const game = await db.getGameById(id)
+  
     if (!game) {
       const data = db.parse(catalog[id])
       Logger.info(`Game ${data.title} not found. Inserting on database...`)
