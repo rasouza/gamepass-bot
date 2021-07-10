@@ -3,6 +3,7 @@ require('dotenv').config();
 const { Client, Collection, MessageEmbed } = require('discord.js');
 const fs = require('fs')
 
+const Sentry = require('./config/sentry')
 const { prefix, username } = require('./config/settings.json')
 const discord = require('./services/discord')
 const db = require('./services/supabase')
@@ -45,6 +46,12 @@ client.on('message', async msg => {
   }
 })
 
-process.on('unhandledRejection', (error,) => {
+process.on('unhandledRejection', (error) => {
+  Sentry.captureException(error)
   Logger.error(error);
-});
+})
+
+process.on('uncaughtException', (error) => {
+  Sentry.captureException(error)
+  Logger.error(error);
+})

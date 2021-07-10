@@ -1,6 +1,5 @@
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-
 # GamePass Discord BOT
 
 GamePass is a bot designed to make announcements of new games arriving in well known platforms such as Microsoft Game Pass, Sony PS+ and Epic Games

@@ -8,6 +8,8 @@
     "dev": "nodemon bot.js"
   },
   "dependencies": {
+    "@sentry/node": "^6.8.0",
+    "@sentry/tracing": "^6.8.0",
     "@supabase/supabase-js": "^1.18.1",
     "axios": "^0.21.1",
     "discord.js": "^12.5.3",
