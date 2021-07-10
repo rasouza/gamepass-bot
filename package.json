@@ -6,9 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node bot.ts",
-    "dev": "ts-node-dev --poll bot.ts",
-    "sync": "ts-node sync.ts",
-    "sync:dev": "ts-node-dev --poll sync.ts"
+    "dev": "ts-node-dev --poll bot.ts"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
@@ -25,10 +23,7 @@
     "winston-dev-format": "^0.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
-    "@typescript-eslint/parser": "^4.28.2",
-    "eslint": "^7.30.0",
-    "local-repl": "^4.0.0",
+    "nodemon": "^2.0.11",
     "ts-node-dev": "^1.1.8"
   }
 }
