@@ -5,7 +5,8 @@
   "author": "R. A. Souza",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon bot.js"
+    "start": "ts-node bot.ts",
+    "dev": "ts-node-dev --poll bot.ts"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
@@ -17,10 +18,12 @@
     "filesize": "^6.4.0",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
+    "typescript": "^4.3.5",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.11"
+    "nodemon": "^2.0.11",
+    "ts-node-dev": "^1.1.8"
   }
 }

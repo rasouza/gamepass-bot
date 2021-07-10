@@ -1,8 +1,10 @@
-const { createClient } = require('@supabase/supabase-js')
-const Logger = require('../config/logger')
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+import { Game, Subscription, XboxGame } from './_types'
+import Logger from '../config/logger'
+import { createClient, SupabaseRealtimePayload } from '@supabase/supabase-js'
 
-exports.parse = ({ 
+const supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string)
+
+export function parse ({ 
   ProductTitle: title, 
   DeveloperName: developer, 
   ImageHero: image, 
@@ -10,7 +12,7 @@ exports.parse = ({
   ApproximateSizeInBytes: size,
   ProductDescription: description,
   StoreId: id
-}) => {
+}: XboxGame): Game {
   const priceInt = price?.MSRP ? Math.round(Number(price.MSRP.slice(1))*100) : null
 
   return {
@@ -60,15 +62,15 @@ exports.cleanupGamesBefore = async date => {
 exports.newSubscription = async (channel, webhook) => {
   const { data, error } = await supabase.from('subscriptions').insert({ channel: channel, webhook })
 
-  if (error) logger.error(error)
+  if (error) Logger.error(error)
 
   return data
 }
 
-exports.getSubscriptions = async () => {
+export async function getSubscriptions(): Promise<Subscription[]> {
   const { data, error } = await supabase.from('subscriptions').select();
 
-  if (error) logger.error(error)
+  if (error) Logger.error(error)
 
   return data
 }
@@ -76,14 +78,14 @@ exports.getSubscriptions = async () => {
 exports.deleteSubscription = async channel => {
   const { data, error } = await supabase.from('subscriptions').delete().eq('channel', channel);
 
-  if (error) logger.error(error)
+  if (error) Logger.error(error)
 
   return data
 }
 
-exports.onInsert = onInsert => {
+export function onInsert(fnInsert: (payload: SupabaseRealtimePayload<Game>) => void) {
   supabase.from('games').on('INSERT', async payload => {
     Logger.debug(payload.new)
-    await onInsert(payload)
+    await fnInsert(payload)
   }).subscribe()
 }
