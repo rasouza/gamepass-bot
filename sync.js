@@ -48,4 +48,4 @@ process.on('unhandledRejection', (error,) => {
 });
 
 sync()
-cleanup()
+// cleanup()
