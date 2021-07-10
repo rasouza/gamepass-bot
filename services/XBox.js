@@ -1,4 +1,6 @@
 const axios = require('axios').default
+const Logger = require('../config/logger')
+
 
 const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'
@@ -14,9 +16,10 @@ exports.getById = async id => {
   const data = {
     'Products': [ id ]
   }
-  
-  const resp = await client.post('/products', { data }, { params })
 
+  const resp = await client.post('/products', data, { params })
+  Logger.silly(resp.data.Products[id])
+  
   return resp.data.Products[id]
 }
 
