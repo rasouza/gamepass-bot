@@ -1,5 +1,5 @@
 const { createClient } = require('@supabase/supabase-js')
-const logger = require('../config/logger')
+const Logger = require('../config/logger')
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
 exports.parse = ({ 
@@ -25,12 +25,10 @@ exports.parse = ({
 }
 
 exports.getGameById = async id => {
-  const { data, error } = await supabase.from('games').select('*').eq('id', id)
-
+  const { data, error } = await supabase.from('games').select('*').eq('id', id).maybeSingle()
   if (error) Logger.error(error)
-  if (data.length === 0) return null
 
-  return data[0]
+  return data
 }
 
 exports.insertGame = async game => {
@@ -42,8 +40,8 @@ exports.insertGame = async game => {
 
 exports.syncGame = async id => {
   const date = new Date()
-  const { data, error } = await supabase.from('games').update({ last_sync: date }).eq('id', id)
-  
+  const { data, error } = await supabase.from('games').update({ last_sync: date }).eq('id', id).single()
+
   Logger.debug(`${data.title} updated at ${date.toISOString()}`)
   if (error) Logger.error(error)
 
@@ -81,4 +79,11 @@ exports.deleteSubscription = async channel => {
   if (error) logger.error(error)
 
   return data
+}
+
+exports.onInsert = onInsert => {
+  supabase.from('games').on('INSERT', async payload => {
+    Logger.debug(payload.new)
+    await onInsert(payload)
+  }).subscribe()
 }
