@@ -3,8 +3,10 @@ require('dotenv').config();
 const { Client, Collection, MessageEmbed } = require('discord.js');
 const fs = require('fs')
 
-const { prefix } = require('./config/settings.json')
-
+const { prefix, username } = require('./config/settings.json')
+const discord = require('./services/discord')
+const db = require('./services/supabase')
+const Logger = require('./config/logger')
 
 const client = new Client();
 client.login(process.env.DISCORD_TOKEN)
@@ -17,7 +19,14 @@ commandFiles.forEach(file => {
 })
 
 client.on('ready', async () => {
-  console.log('GamespassBot is ready!')
+  const subscriptions = await db.getSubscriptions()
+  const webhooks = await Promise.all(subscriptions.map(sub => client.fetchWebhook(sub.webhook)))
+
+  db.onInsert(payload => {
+    const game = discord.gameEmbed(payload.new)
+    discord.broadcast(webhooks, 'A new game has arrived!', game)
+  })
+  console.log(`${username} is ready!`)
 })
 
 client.on('message', async msg => {
@@ -36,3 +45,6 @@ client.on('message', async msg => {
   }
 })
 
+process.on('unhandledRejection', (error,) => {
+  Logger.error(error);
+});

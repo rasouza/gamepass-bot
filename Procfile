@@ -1,1 +1,1 @@
-worker: node notifier.js
+worker: node bot.js
