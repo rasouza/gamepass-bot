@@ -1,3 +1,9 @@
 {
-  "prefix": "!"
+  "prefix": "!",
+  "webhooks": [
+    {
+      "id": "863228349295362069",
+      "token": "ijlxHEUfxYbBe_n4IuHvlCpTwlwmEV8x5ZKu4LTYRCFS3CJhN4wpxfFqUfHiUZqchAA0"
+    }
+  ]
 }
