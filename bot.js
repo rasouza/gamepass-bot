@@ -3,7 +3,7 @@ require('dotenv').config();
 const { Client, Collection, MessageEmbed } = require('discord.js');
 const fs = require('fs')
 
-const { prefix } = require('./config.json')
+const { prefix } = require('./config/settings.json')
 
 
 const client = new Client();
@@ -34,7 +34,5 @@ client.on('message', async msg => {
     console.error(error)
     msg.reply('There was an error trying to execute that command')
   }
-
-  
 })
 

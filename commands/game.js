@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js')
 const size = require('filesize')
-const Gamepass = require('../services/XBox')
-const Logger = require('../logger')
+const Gamepass = require('../services/xbox')
+const Logger = require('../config/logger')
 
 const buildMsg = game => {
   const description = game.ProductDescription.length > 300 ? `${game.ProductDescription.slice(0, 300)}...` : game.ProductDescription

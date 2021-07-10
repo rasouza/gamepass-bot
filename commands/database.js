@@ -1,7 +1,7 @@
 const { createClient } = require('@supabase/supabase-js')
 
-const Logger = require('../logger')
-const XBox = require('../services/XBox')
+const Logger = require('../config/logger')
+const XBox = require('../services/xbox')
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 

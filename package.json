@@ -1,11 +1,11 @@
 {
   "name": "gamepass-bot",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon bot.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.18.1",
