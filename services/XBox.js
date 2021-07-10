@@ -6,7 +6,7 @@ const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'
 })
 
-exports.getById = async id => {
+const getByIds = async ids => {
   const params = {
     market: 'US',
     language: 'en-us',
@@ -14,13 +14,13 @@ exports.getById = async id => {
   }
 
   const data = {
-    'Products': [ id ]
+    'Products': ids
   }
 
   const resp = await client.post('/products', data, { params })
-  Logger.silly(resp.data.Products[id])
+  Logger.silly(resp.data.Products)
   
-  return resp.data.Products[id]
+  return resp.data.Products
 }
 
 exports.getCatalog = async () => {
@@ -30,8 +30,11 @@ exports.getCatalog = async () => {
     market: 'US'
   }
   const resp = await client.get('/sigls/v2', { params })
+  const ids = resp.data.slice(1).map(game => game.id)
+  Logger.debug(`Found ${ids.length} games`)
 
-  const games = resp.data.slice(1).map(game => game.id)
+  const games = getByIds(ids)
 
-  return resp.data.slice(1)
+  return games
 }
+

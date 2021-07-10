@@ -6,22 +6,26 @@ const { username, avatarURL } = require('../config/settings.json')
 const MAX_LENGTH = 300
 
 exports.gameEmbed = ({ 
-  ProductTitle: title, 
-  DeveloperName: developer, 
-  ImageHero: { URI: url }, 
-  Price: { MSRP: price },
-  ApproximateSizeInBytes: size,
-  ProductDescription: description
+  title, 
+  description,
+  developer, 
+  image, 
+  price,
+  size
 }) => {
   const trimmedDescription = `${description.slice(0, MAX_LENGTH)}...`
-  return new MessageEmbed({
+
+  const msg = new MessageEmbed({
     title,
     author: { name: developer },
     description: description.length < MAX_LENGTH ? description : trimmedDescription,
-    image: { url }
+    image: { url: image }
   })
-    .addField('Price', price, true)
-    .addField('Size', filesize(size), true)
+
+  if (price) msg.addField('Price', `$${price/100}`, true)
+  if (size) msg.addField('Size', filesize(size), true)
+
+  return msg
 }
 
 exports.send = (id, token, msg, embed) => {
