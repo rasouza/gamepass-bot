@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js')
+const logger = require('../config/logger')
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
 exports.parse = ({ 
@@ -21,4 +22,12 @@ exports.parse = ({
     size, 
     description
   }
+}
+
+exports.newSubscription = async (channel, webhook) => {
+  const { data, error } = await supabase.from('channels').insert({ id: channel, webhook })
+
+  if (error) logger.error(error)
+
+  return data
 }
