@@ -1,11 +1,10 @@
 const { createLogger, format, transports } = require('winston')
 const devFormat = require('winston-dev-format')
-const { env } = require('./config.json')
 
 const { combine, timestamp, json, metadata, colorize } = format
 const { Console } = transports
 
-const isLocal = env === 'local'
+const isLocal = process.env.NODE_ENV === 'local'
 
 // Note: Order matters!
 const defaultFormat = combine(
