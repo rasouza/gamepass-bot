@@ -4,10 +4,21 @@ const { Client, Collection, MessageEmbed } = require('discord.js');
 const fs = require('fs')
 
 const Sentry = require('./config/sentry')
+const Logger = require('./config/logger')
+
+process.on('unhandledRejection', (error) => {
+  Sentry.captureException(error)
+  Logger.error(error);
+})
+
+process.on('uncaughtException', (error) => {
+  Sentry.captureException(error)
+  Logger.error(error);
+})
+
 const { prefix, username } = require('./config/settings.json')
 const discord = require('./services/discord')
 const db = require('./services/supabase')
-const Logger = require('./config/logger')
 
 const client = new Client();
 client.login(process.env.DISCORD_TOKEN)
@@ -27,7 +38,7 @@ client.on('ready', async () => {
     const game = discord.gameEmbed(payload.new)
     discord.broadcast(webhooks, 'A new game has arrived!', game)
   })
-  console.log(`${username} is ready!`)
+  Logger.info(`${username} is ready!`)
 })
 
 client.on('message', async msg => {

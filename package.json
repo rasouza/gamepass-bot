@@ -16,6 +16,7 @@
     "dotenv": "^10.0.0",
     "filesize": "^6.4.0",
     "lodash": "^4.17.21",
+    "logdna-winston": "^3.0.5",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0"
   },
