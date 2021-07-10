@@ -33,3 +33,9 @@ exports.send = (id, token, msg, embed) => {
 
   webhook.send(msg, { username, avatarURL, embeds: [embed] })
 }
+
+exports.broadcast = (webhooks, msg, embed) => {
+  webhooks.forEach(webhook => {
+    webhook.send(msg, { username, avatarURL, embeds: [embed] })
+  })
+}
