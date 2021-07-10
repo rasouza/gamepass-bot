@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const size = require('filesize')
-const Gamepass = require('../services/GamePass')
+const Gamepass = require('../services/XBox')
 const Logger = require('../logger')
 
 const buildMsg = game => {
