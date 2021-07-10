@@ -60,7 +60,23 @@ exports.cleanupGamesBefore = async date => {
 }
 
 exports.newSubscription = async (channel, webhook) => {
-  const { data, error } = await supabase.from('channels').insert({ id: channel, webhook })
+  const { data, error } = await supabase.from('subscriptions').insert({ channel: channel, webhook })
+
+  if (error) logger.error(error)
+
+  return data
+}
+
+exports.getSubscriptions = async () => {
+  const { data, error } = await supabase.from('subscriptions').select();
+
+  if (error) logger.error(error)
+
+  return data
+}
+
+exports.deleteSubscription = async channel => {
+  const { data, error } = await supabase.from('subscriptions').delete().eq('channel', channel);
 
   if (error) logger.error(error)
 
