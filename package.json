@@ -5,6 +5,7 @@
   "author": "R. A. Souza",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "start": "ts-node bot.ts",
     "dev": "ts-node-dev --poll bot.ts",
     "sync": "ts-node sync.ts",
