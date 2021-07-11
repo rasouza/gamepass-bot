@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node bot.ts",
-    "dev": "ts-node-dev --poll bot.ts"
+    "dev": "ts-node-dev --poll bot.ts",
+    "sync": "ts-node sync.ts",
+    "sync:dev": "ts-node-dev --poll sync.ts"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",

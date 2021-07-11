@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-import { getGameById, insertGame, syncGame, cleanupGamesBefore, parse } from './src/services/supabase'
-import { getCatalog } from './src/services/xbox'
-import Logger from './src/config/logger'
+import { getGameById, insertGame, syncGame, cleanupGamesBefore, parse } from './services/supabase'
+import { getCatalog } from './services/xbox'
+import Logger from './config/logger'
 
 Logger.info('Sync started! Checking new games...');
 

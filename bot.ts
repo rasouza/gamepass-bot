@@ -1,4 +1,5 @@
-require('dotenv').config();
+import dotenv from 'dotenv'
+dotenv.config()
 
 import { Client, Collection } from 'discord.js'
 import fs from 'fs'
@@ -23,7 +24,7 @@ commandFiles.forEach((file: string) => {
 client.on('ready', async () => {
   const subscriptions = await getSubscriptions()
   if (!subscriptions) return 
-  
+
   const webhooks = await Promise.all(subscriptions.map(sub => client.fetchWebhook(sub.webhook)))
 
   onInsert((payload) => {
