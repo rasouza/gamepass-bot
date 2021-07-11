@@ -3,8 +3,8 @@ import filesize from 'filesize'
 import { Client, Collection, Webhook, MessageEmbed } from 'discord.js'
 
 import { username, avatarURL } from '../config/settings.json'
-import { Command, Embed, Game } from '../interfaces'
-import Logger from '../config/logger'
+import { Command, Embed } from '../interfaces'
+import Game from '../domain/Game'
 
 const MAX_LENGTH = 300
 
@@ -26,26 +26,26 @@ export function loadCommands(path: string): Collection<string, Command> {
   return commands
 }
 
-// TODO: Move to domain
-export function gameEmbed({ title, description, developer, image, price, size}: Game): MessageEmbed {
+// TODO: #3 Move to domain
+export function createEmbed(game: Game): MessageEmbed {
   
   const config: Embed = {
-    title,
-    author: { name: developer },
-    image: { url: image }
+    title: game.title,
+    author: { name: game.developer },
+    image: { url: game.image }
   }
 
   // Truncate large descriptions
-  if (description.length > MAX_LENGTH) {
-    config.description = `${description.slice(0, MAX_LENGTH)}...`
+  if (game.description.length > MAX_LENGTH) {
+    config.description = `${game.description.slice(0, MAX_LENGTH)}...`
   } else {
-    config.description = description
+    config.description = game.description
   }
 
   const msg = new MessageEmbed()
 
-  if (price) msg.addField('Price', `$${price/100}`, true)
-  if (size) msg.addField('Size', filesize(size), true)
+  if (game.price) msg.addField('Price', `$${game.price/100}`, true)
+  if (game.size) msg.addField('Size', filesize(game.size), true)
 
   return msg
 }
