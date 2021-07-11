@@ -9,17 +9,17 @@ const db = new SubscriptionDB()
 export default {
   name: 'subscribe',
   description: 'Subscribe channel for Gamepass news',
-  async execute(message: Message): Promise<void> {
+  async execute (message: Message): Promise<void> {
     const webhooks = await (message.channel as TextChannel).fetchWebhooks()
-    const webhook = webhooks.find(webhook => webhook.name ===  username)
+    const webhook = webhooks.find(webhook => webhook.name === username)
     if (webhook) {
       message.reply('This channel is already subscribed.')
       return
     }
 
-    const { 
-      id, 
-      channelID: channel, 
+    const {
+      id,
+      channelID: channel,
       guildID: guild
     } = await (message.channel as TextChannel).createWebhook(username, { avatar: avatarURL })
 
@@ -29,9 +29,9 @@ export default {
     const nickname = message.member?.displayName
     const channelName = (message.channel as TextChannel).name
     const guildName = message.guild?.name
-    
+
     Logger.info(`${nickname} subscribed to channel #${channelName} on ${guildName}`)
-    
+
     message.reply('Channel subscribed successfully! I\'m posting here whenever a new game is out on Game Pass.')
   }
 }

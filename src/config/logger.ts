@@ -1,6 +1,6 @@
 import { createLogger, format, transports } from 'winston'
-import logDnaWinston from 'logdna-winston';
-import devFormat from 'winston-dev-format';
+import LogDnaWinston from 'logdna-winston'
+import devFormat from 'winston-dev-format'
 
 const { combine, timestamp, json, metadata, colorize } = format
 const { Console } = transports
@@ -8,7 +8,7 @@ const { Console } = transports
 const isLocal = process.env.NODE_ENV === 'local'
 
 const tty = new Console()
-const logDNA = new logDnaWinston({
+const logDNA = new LogDnaWinston({
   key: process.env.LOGDNA_KEY,
   indexMeta: true,
   handleExceptions: true,

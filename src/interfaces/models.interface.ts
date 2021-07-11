@@ -12,5 +12,5 @@ export interface GameModel {
   price: number | null,
   size: number | null,
   description: string,
-  last_sync?: Date
+  last_sync?: Date // eslint-disable-line camelcase
 }

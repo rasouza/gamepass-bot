@@ -8,7 +8,7 @@ interface Price {
   MSRP: string,
   SalesPrice: string,
   IsFree: boolean
-} 
+}
 
 export interface XboxGame {
   StoreId: string

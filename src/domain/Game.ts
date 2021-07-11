@@ -8,9 +8,9 @@ export default class Game {
   price: number | null
   size: number | null
   description: string
-  last_sync: Date
+  last_sync: Date // eslint-disable-line camelcase
 
-  constructor(game: GameModel) {
+  constructor (game: GameModel) {
     this.id = game.id
     this.title = game.title
     this.developer = game.developer

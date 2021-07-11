@@ -8,7 +8,7 @@ export interface Command {
 
 interface EmbedAuthor {
   name?: string,
-  icon_url?: string,
+  icon_url?: string, // eslint-disable-line camelcase
   url?: string
 }
 
@@ -23,7 +23,7 @@ interface EmbedField {
 
 interface EmbedFooter {
   text?: string,
-  icon_url?: string
+  icon_url?: string // eslint-disable-line camelcase
 }
 
 export interface Embed {

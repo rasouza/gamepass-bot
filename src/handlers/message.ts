@@ -1,7 +1,7 @@
 import fs from 'fs'
 
-import { Collection, Message } from "discord.js";
-import { Command } from "../interfaces";
+import { Collection, Message } from 'discord.js'
+import { Command } from '../interfaces'
 import { prefix } from '../config/settings.json'
 
 const COMMAND_RELATIVE = '../commands'
@@ -14,13 +14,13 @@ commandFiles.forEach(async file => {
   commands.set(command.name, command)
 })
 
-export default function messageHandler(message: Message): void {
+export default function messageHandler (message: Message): void {
   if (!message.content.startsWith(prefix) || message.author.bot) return
 
   const args = message.content.slice(prefix.length).trim().split(/ +/)
   const command = args.shift()?.toLowerCase()
   if (!command || !commands.has(command)) return
-  
+
   try {
     commands.get(command)?.execute(message, args)
   } catch (error) {
