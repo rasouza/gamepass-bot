@@ -1,15 +1,14 @@
 
-import { getIdCatalog, searchGames } from './src/services/xbox'
-import GameDB from './src/models/game'
-
 import dotenv from 'dotenv'
 dotenv.config()
 
-import Logger from './src/config/logger'// eslint-disable-line import/first
+import { getIdCatalog, searchGames } from './src/services/xbox'
+import GameDB from './src/models/game'
+
+import Logger from './src/config/logger'
+import { startTransaction } from './src/config/sentry'
 
 const gameDB = new GameDB()
-
-Logger.info('Sync started! Checking new games...')
 
 async function getInsertDiff (ids: string[]): Promise<string[]> {
   return await ids.reduce(async (acc: Promise<string[]>, id: string) => {
@@ -23,12 +22,13 @@ async function getInsertDiff (ids: string[]): Promise<string[]> {
 async function getCleanupDiff (ids: string[]): Promise<string[]> {
   const games = await gameDB.getAll()
 
-  return games
-    ?.map(game => game.id)
-    .filter(id => !ids.includes(id)) || []
+  return games?.map((game) => game.id).filter((id) => !ids.includes(id)) || []
 }
 
 async function sync () {
+  Logger.info('Sync started! Checking new games...')
+  const transaction = startTransaction('XBox Sync')
+
   const XboxCatalog = await getIdCatalog()
   const insertDiff = await getInsertDiff(XboxCatalog)
   const cleanupDiff = await getCleanupDiff(XboxCatalog)
@@ -40,11 +40,13 @@ async function sync () {
   }
 
   if (cleanupDiff.length > 0) {
-    cleanupDiff.forEach(async id => {
+    cleanupDiff.forEach(async (id) => {
       const game = await gameDB.delete(id)
       Logger.info(`${game?.title} is being deleted`, { game })
     })
   }
+
+  transaction.finish()
 }
 
 sync()

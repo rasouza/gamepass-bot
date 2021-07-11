@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 
 import repl from 'repl'
 
@@ -9,10 +11,8 @@ import SubscriptionDB from './src/models/subscription'
 import Game from './src/domain/Game'
 import Subscription from './src/domain/Subscription'
 
-import dotenv from 'dotenv'
-dotenv.config()
-import { client as discord } from './src/services/discord' // eslint-disable-line import/first
-import { client as supabase } from './src/models/base'// eslint-disable-line import/first
+import { client as discord } from './src/services/discord'
+import { client as supabase } from './src/models/base'
 
 const server = repl.start()
 

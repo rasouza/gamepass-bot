@@ -15,5 +15,6 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "import/first": 0
     }
 }
