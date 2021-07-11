@@ -1,6 +1,6 @@
 import { Game as IGame } from '../interfaces'
 
-export class Game {
+export default class Game {
   id: string
   title: string
   developer: string

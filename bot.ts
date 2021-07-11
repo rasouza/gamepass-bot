@@ -1,26 +1,16 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-import { Client, Collection } from 'discord.js'
-import fs from 'fs'
-
-import { Command } from './src/interfaces'
 import Sentry from './src/config/sentry'
 import Logger from './src/config/logger'
 import { prefix, username } from './src/config/settings.json'
-import { gameEmbed, broadcast } from './src/services/discord'
+import { gameEmbed, broadcast, createLogin, loadCommands } from './src/services/discord'
 import { getSubscriptions, onInsert } from "./src/services/supabase";
 
-const client = new Client();
-client.login(process.env.DISCORD_TOKEN)
+const COMMAND_PATH = './src/commands'
 
-// Load all commands
-const commands: Collection<string, Command> = new Collection()
-const commandFiles = fs.readdirSync('./commands').filter((file: string) => file.endsWith('.ts'))
-commandFiles.forEach(async (file: string) => {
-  const command = await import(`./src/commands/${file}`)
-  commands.set(command.name, command)
-})
+const client = createLogin(process.env.DISCORD_TOKEN)
+const commands = loadCommands(COMMAND_PATH)
 
 client.on('ready', async () => {
   const subscriptions = await getSubscriptions()
@@ -39,12 +29,12 @@ client.on('message', async msg => {
   if (!msg.content.startsWith(prefix) || msg.author.bot) return
 
   const args = msg.content.slice(prefix.length).trim().split(/ +/)
-  const command = args.shift()!.toLowerCase()
+  const command = args.shift()?.toLowerCase()
 
   if (!commands.has(command)) return
 
   try {
-    commands.get(command)!.execute(msg, args)
+    commands.get(command)?.execute(msg, args)
   } catch (error) {
     console.error(error)
     msg.reply('There was an error trying to execute that command')
