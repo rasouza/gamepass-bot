@@ -10,7 +10,7 @@ export default class GameDB extends DB<GameModel, Game> {
   }
 
   async cleanupGamesBefore(date: Date): Promise<GameModel[] | null> {
-    const { data, error } = await this.table.delete().lt('last_sync', date)
+    const { data, error } = await this.client.from<GameModel>('games').delete().lt('last_sync', date)
   
     if(data) data.forEach(game => Logger.info(`Cleaning up ${game.title}`))
     if (error) Logger.error(error)
@@ -19,7 +19,7 @@ export default class GameDB extends DB<GameModel, Game> {
   }
 
   onInsert(fnInsert: (game: Game) => void): void {
-    this.table.on('INSERT', payload => {
+    this.client.from<GameModel>('games').on('INSERT', payload => {
       Logger.debug('New game inserted', { game: payload.new })
       const game = new Game(payload.new)
 

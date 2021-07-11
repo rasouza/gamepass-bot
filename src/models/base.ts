@@ -1,5 +1,4 @@
-import { createClient, SupabaseRealtimePayload } from '@supabase/supabase-js'
-import { SupabaseQueryBuilder } from '@supabase/supabase-js/dist/main/lib/SupabaseQueryBuilder'
+import { createClient } from '@supabase/supabase-js'
 import Logger from '../config/logger'
 
 export const client = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string)
@@ -9,44 +8,60 @@ interface PK {
 }
 
 export abstract class DB<Model extends PK, Domain> {
-  table: SupabaseQueryBuilder<Model>
+  name: string
+  client = client
 
-  constructor(table: string) {
-    this.table = client.from<Model>(table)
+  constructor(name: string) {
+    this.name = name
+
   }
 
   async getAll(): Promise<Model[] | null> {
-    const { data, error } = await this.table.select('*')
+    const { data, error } = await this.client.from<Model>(this.name).select('*')
+    if (error) Logger.error(error)
+
+    return data
+  }
+
+  async getAllById(ids: Model[keyof Model][]): Promise<Model[] | null> {
+    const { data, error } = await this.client.from<Model>(this.name).select('*').in('id', ids)
     if (error) Logger.error(error)
 
     return data
   }
 
   async getById(id: Model[keyof Model]): Promise<Model | null> {
-    const { data, error } = await this.table.select('*').eq('id', id).single()
+    const { data, error } = await this.client.from<Model>(this.name).select('*').eq('id', id).maybeSingle()
     if (error) Logger.error(error)
 
     return data
   }
 
-  async insert(domain: Domain): Promise<Model | null> {
-    const { data, error } = await this.table.insert(domain).single()
+  async insert(domain: Domain | Domain[]): Promise<Model | Model[] | null> {
+    const { data, error } = await this.client.from<Model>(this.name).insert(domain)
     
     if (error) Logger.error(error)
     return data
   }
 
   async update(id: Model[keyof Model], model: Model): Promise<Model | null> {
-    const { data, error } = await this.table.update(model).eq('id', id).single()
+    const { data, error } = await this.client.from<Model>(this.name).update(model).eq('id', id).single()
     if (error) Logger.error(error)
 
     return data
   }
 
   async delete(id: Model[keyof Model]): Promise<Model | null> {
-    const { data, error } = await this.table.delete().eq('id', id).single()
+    const { data, error } = await this.client.from<Model>(this.name).delete().eq('id', id).single()
     if (error) Logger.error(error)
 
     return data
+  }
+
+  async exists(id: Model[keyof Model]): Promise<boolean | null> {
+    const { data, error } = await this.client.from<Model>(this.name).select('*').eq('id', id).maybeSingle()
+    if (error) Logger.error(error)
+
+    return !!data
   }
 }
