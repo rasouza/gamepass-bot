@@ -22,7 +22,7 @@ client.interceptors.request.use(function (config) {
 
 // Add a response interceptor
 client.interceptors.response.use(function (response) {
-  Logger.debug('[XBox Service] got response', { response })
+  Logger.debug('[XBox Service] got response', { response: response.data })
   return response
 }, function (error) {
   // Any status codes that falls outside the range of 2xx cause this function to trigger
