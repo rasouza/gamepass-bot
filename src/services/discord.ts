@@ -1,10 +1,30 @@
+import fs from 'fs'
 import filesize from 'filesize'
-import { Webhook, MessageEmbed } from 'discord.js'
+import { Client, Collection, Webhook, MessageEmbed } from 'discord.js'
 
 import { username, avatarURL } from '../config/settings.json'
-import { Embed, Game } from '../interfaces'
+import { Command, Embed, Game } from '../interfaces'
+import Logger from '../config/logger'
 
 const MAX_LENGTH = 300
+
+export function createLogin(token: string): Client {
+  const client = new Client();
+  client.login(token)
+
+  return client
+}
+
+export function loadCommands(path: string): Collection<string, Command> {
+  const commands: Collection<string, Command> = new Collection()
+  const commandFiles = fs.readdirSync(path).filter((file: string) => file.endsWith('.ts'))
+  commandFiles.forEach(async file => {
+    const command = await import(`${path}/${file}`)
+    commands.set(command.name, command)
+  })
+
+  return commands
+}
 
 // TODO: Move to domain
 export function gameEmbed({ title, description, developer, image, price, size}: Game): MessageEmbed {
@@ -30,7 +50,7 @@ export function gameEmbed({ title, description, developer, image, price, size}: 
   return msg
 }
 
-export function broadcast(webhooks: Webhook[], msg: string, embed: MessageEmbed) {
+export function broadcast(webhooks: Webhook[], msg: string, embed: MessageEmbed): void {
   webhooks.forEach(webhook => {
     webhook.send(msg, { username, avatarURL, embeds: [embed] })
   })
