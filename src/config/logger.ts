@@ -1,6 +1,6 @@
-const { createLogger, format, transports } = require('winston')
-const logDnaWinston = require('logdna-winston');
-const devFormat = require('winston-dev-format')
+import { createLogger, format, transports } from 'winston'
+import logDnaWinston from 'logdna-winston';
+import devFormat from 'winston-dev-format';
 
 const { combine, timestamp, json, metadata, colorize } = format
 const { Console } = transports

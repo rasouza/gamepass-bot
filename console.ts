@@ -3,7 +3,7 @@ dotenv.config()
 
 import repl from 'repl'
 import { createClient } from '@supabase/supabase-js'
-import { createLogin } from './src/services/discord'
+import { client as discord } from './src/services/discord'
 
 import * as xbox from './src/services/xbox'
 
@@ -14,11 +14,10 @@ import SubscriptionDB from './src/models/subscription'
 import Game from './src/domain/Game'
 import Subscription from './src/domain/Subscription'
 
-
 const server = repl.start()
 
 server.context.supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string)
-server.context.discord = createLogin(process.env.DISCORD_TOKEN || '')
+server.context.discord = discord
 
 // Services
 server.context.xbox = xbox
