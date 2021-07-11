@@ -1,4 +1,4 @@
-import { Game, Subscription, XboxGame } from './_types'
+import { Game, Subscription, XboxGame } from '../interfaces'
 import Logger from '../config/logger'
 import { createClient, SupabaseRealtimePayload } from '@supabase/supabase-js'
 
@@ -26,48 +26,48 @@ export function parse ({
   }
 }
 
-exports.getGameById = async id => {
-  const { data, error } = await supabase.from('games').select('*').eq('id', id).maybeSingle()
+export async function getGameById(id: string): Promise<Game|null> {
+  const { data, error } = await supabase.from<Game>('games').select('*').eq('id', id).single()
   if (error) Logger.error(error)
 
   return data
 }
 
-exports.insertGame = async game => {
-  const { data, error } = await supabase.from('games').insert(game)
+export async function insertGame(game: Game): Promise<Game | null> {
+  const { data, error } = await supabase.from<Game>('games').insert(game).maybeSingle()
   
   if (error) Logger.error(error)
   return data
 }
 
-exports.syncGame = async id => {
+export async function syncGame(id: string): Promise<Game|null> {
   const date = new Date()
-  const { data, error } = await supabase.from('games').update({ last_sync: date }).eq('id', id).single()
+  const { data, error } = await supabase.from<Game>('games').update({ last_sync: date }).eq('id', id).single()
 
-  Logger.debug(`${data.title} updated at ${date.toISOString()}`)
+  Logger.debug(`${data?.title} updated at ${date.toISOString()}`)
   if (error) Logger.error(error)
 
   return data
 }
 
-exports.cleanupGamesBefore = async date => {
-  const { data, error } = await supabase.from('games').delete().lt('last_sync', date)
-  data.forEach(game => Logger.info(`Cleaning up ${game.title}`))
+export async function cleanupGamesBefore(date: Date): Promise<Game[]|null> {
+  const { data, error } = await supabase.from<Game>('games').delete().lt('last_sync', date)
+
+  if(data) data.forEach(game => Logger.info(`Cleaning up ${game.title}`))
+  if (error) Logger.error(error)
+
+  return data
+}
+
+export async function newSubscription(channel: string, webhook: string): Promise<Subscription|null> {
+  const { data, error } = await supabase.from<Subscription>('subscriptions').insert({ channel: channel, webhook }).single()
 
   if (error) Logger.error(error)
 
   return data
 }
 
-exports.newSubscription = async (channel, webhook) => {
-  const { data, error } = await supabase.from('subscriptions').insert({ channel: channel, webhook })
-
-  if (error) Logger.error(error)
-
-  return data
-}
-
-export async function getSubscriptions(): Promise<Subscription[]> {
+export async function getSubscriptions(): Promise<Subscription[]|null> {
   const { data, error } = await supabase.from('subscriptions').select();
 
   if (error) Logger.error(error)
@@ -75,8 +75,8 @@ export async function getSubscriptions(): Promise<Subscription[]> {
   return data
 }
 
-exports.deleteSubscription = async channel => {
-  const { data, error } = await supabase.from('subscriptions').delete().eq('channel', channel);
+export async function deleteSubscription(channel: string): Promise<Subscription[]|null> {
+  const { data, error } = await supabase.from<Subscription>('subscriptions').delete().eq('channel', channel);
 
   if (error) Logger.error(error)
 
