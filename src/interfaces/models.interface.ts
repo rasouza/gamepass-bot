@@ -1,6 +1,7 @@
 export interface SubscriptionModel {
-  channel: string;
-  webhook: string;
+  id: string,
+  guild: string,
+  channel: string,
 }
 
 export interface GameModel {
