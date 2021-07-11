@@ -3,7 +3,6 @@ import Logger from '../config/logger'
 import Game from '../domain/Game'
 import { XboxGame } from '../interfaces'
 
-// TODO: #2 intercepts all requests and log it
 const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'
 })
@@ -11,6 +10,25 @@ const client = axios.create({
 interface Sigls {
   id: string
 }
+
+// Add a request interceptor
+client.interceptors.request.use(function (config) {
+  Logger.debug('[XBox Service] request sent', { config })
+  return config;
+}, function (error) {
+  // Do something with request error
+  return Promise.reject(error);
+});
+
+// Add a response interceptor
+client.interceptors.response.use(function (response) {
+  Logger.debug('[XBox Service] got response', { response })
+  return response;
+}, function (error) {
+  // Any status codes that falls outside the range of 2xx cause this function to trigger
+  // Do something with response error
+  return Promise.reject(error);
+});
 
 function toDomain(game: XboxGame): Game {
 
