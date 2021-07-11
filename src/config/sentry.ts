@@ -1,5 +1,5 @@
-const Sentry = require("@sentry/node");
-const Tracing = require("@sentry/tracing");
+import * as Sentry from '@sentry/node'
+import Tracing from '@sentry/tracing'
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -11,4 +11,4 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-exports = Sentry
+export default Sentry

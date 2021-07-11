@@ -27,7 +27,7 @@ const localFormat = combine(
   devFormat()
 )
 
-module.exports = createLogger({
+export default createLogger({
   transports: [tty, logDNA],
   exceptionHandlers: [tty],
   level: process.env.LOG_LEVEL || 'info',
