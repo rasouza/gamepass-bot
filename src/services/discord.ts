@@ -2,7 +2,6 @@ import filesize from 'filesize'
 import { Client, Webhook, MessageEmbed } from 'discord.js'
 
 import { username, avatarURL } from '../config/settings.json'
-import { Embed } from '../interfaces'
 import Game from '../domain/Game'
 
 const MAX_LENGTH = 300
@@ -12,24 +11,24 @@ client.login(process.env.DISCORD_TOKEN)
 export { client }
 
 export function createEmbed(game: Game): MessageEmbed {
-  
-  const config: Embed = {
-    title: game.title,
-    author: { name: game.developer },
-    image: { url: game.image }
-  }
+  const msg = new MessageEmbed()
 
   // Truncate large descriptions
+  let description: string
   if (game.description.length > MAX_LENGTH) {
-    config.description = `${game.description.slice(0, MAX_LENGTH)}...`
+    description = `${game.description.slice(0, MAX_LENGTH)}...`
   } else {
-    config.description = game.description
+    description = game.description
   }
 
-  const msg = new MessageEmbed()
+  msg
+    .setTitle(game.title)
+    .setAuthor(game.developer)
+    .setDescription(description)
 
   if (game.price) msg.addField('Price', `$${game.price/100}`, true)
   if (game.size) msg.addField('Size', filesize(game.size), true)
+  if (game.image) msg.setImage(game.image)
 
   return msg
 }
