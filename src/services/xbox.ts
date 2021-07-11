@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Logger from '../config/logger'
+import Game from '../domain/Game'
 import { XboxGame } from '../interfaces'
 
 // TODO: #2 intercepts all requests and log it
@@ -11,11 +12,20 @@ interface Sigls {
   id: string
 }
 
-interface XboxGameList {
-  [index: string]: XboxGame
+function toDomain(game: XboxGame): Game {
+
+  return new Game({
+    id: game.StoreId,
+    title: game.ProductTitle,
+    developer: game.DeveloperName,
+    image: game.ImageHero?.URI,
+    price: Number(game.Price?.MSRP.slice(1))*100 || null,
+    size: game.ApproximateSizeInBytes,
+    description: game.ProductDescription
+  })
 }
 
-export async function searchGames(ids: string[]): Promise<XboxGame[]> {
+export async function searchGames(ids: string[]): Promise<Game[]> {
   const params = {
     market: 'US',
     language: 'en-us',
@@ -27,9 +37,9 @@ export async function searchGames(ids: string[]): Promise<XboxGame[]> {
   }
 
   const resp = await client.post('/products', data, { params })
-  const gameList: XboxGameList = resp.data.Products
+  const gameList: XboxGame[] = Object.values(resp.data.Products)
   
-  return Object.values(gameList)
+  return gameList.map(game => toDomain(game))
 }
 
 export async function getIdCatalog(): Promise<string[]> {
