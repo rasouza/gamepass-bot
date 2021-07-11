@@ -49,6 +49,4 @@ export abstract class DB<Model extends PK, Domain> {
 
     return data
   }
-
-  // abstract fromDomain(domain: Domain): Model
 }

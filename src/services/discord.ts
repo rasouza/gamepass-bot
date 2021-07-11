@@ -19,14 +19,13 @@ export function loadCommands(path: string): Collection<string, Command> {
   const commands: Collection<string, Command> = new Collection()
   const commandFiles = fs.readdirSync(path).filter((file: string) => file.endsWith('.ts'))
   commandFiles.forEach(async file => {
-    const command = await import(`${path}/${file}`)
+    const command = (await import(`../commands/${file}`)).default
     commands.set(command.name, command)
   })
 
   return commands
 }
 
-// TODO: #3 Move to domain
 export function createEmbed(game: Game): MessageEmbed {
   
   const config: Embed = {
