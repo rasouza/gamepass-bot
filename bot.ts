@@ -4,8 +4,9 @@ dotenv.config()
 import Sentry from './src/config/sentry'
 import Logger from './src/config/logger'
 import { prefix, username } from './src/config/settings.json'
-import { gameEmbed, broadcast, createLogin, loadCommands } from './src/services/discord'
+import { createEmbed, broadcast, createLogin, loadCommands } from './src/services/discord'
 import { getSubscriptions, onInsert } from "./src/services/supabase";
+import Game from './src/domain/Game'
 
 const COMMAND_PATH = './src/commands'
 
@@ -19,8 +20,9 @@ client.on('ready', async () => {
   const webhooks = await Promise.all(subscriptions.map(sub => client.fetchWebhook(sub.webhook)))
 
   onInsert((payload) => {
-    const game = gameEmbed(payload.new)
-    broadcast(webhooks, 'A new game has arrived!', game)
+    const game = new Game(payload.new)
+    const gameEmbed = createEmbed(payload.new)
+    broadcast(webhooks, 'A new game has arrived!', gameEmbed)
   })
   Logger.info(`${username} is ready!`)
 })

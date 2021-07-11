@@ -1,4 +1,4 @@
-import { Game as IGame } from '../interfaces'
+import { GameModel } from '../interfaces'
 
 export default class Game {
   id: string
@@ -10,7 +10,7 @@ export default class Game {
   description: string
   last_sync: Date
 
-  constructor(game: IGame) {
+  constructor(game: GameModel) {
     this.id = game.id
     this.title = game.title
     this.developer = game.developer
