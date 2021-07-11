@@ -18,7 +18,6 @@
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "filesize": "^6.4.0",
-    "global": "^4.4.0",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
     "typescript": "^4.3.5",
@@ -29,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "eslint": "^7.30.0",
-    "nodemon": "^2.0.11",
+    "local-repl": "^4.0.0",
     "ts-node-dev": "^1.1.8"
   }
 }
