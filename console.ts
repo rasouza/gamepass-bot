@@ -5,10 +5,14 @@ import repl from 'repl'
 import { createClient } from '@supabase/supabase-js'
 import { createLogin } from './src/services/discord'
 
-import * as db from './src/services/supabase'
 import * as xbox from './src/services/xbox'
 
+import { client } from './src/models/base'
+import GameDB from './src/models/game'
+import SubscriptionDB from './src/models/subscription'
+
 import Game from './src/domain/Game'
+import Subscription from './src/domain/Subscription'
 
 
 const server = repl.start()
@@ -17,8 +21,13 @@ server.context.supabase = createClient(process.env.SUPABASE_URL as string, proce
 server.context.discord = createLogin(process.env.DISCORD_TOKEN || '')
 
 // Services
-server.context.db = db
 server.context.xbox = xbox
+
+// Models
+server.context.db = client
+server.context.GameDB = new GameDB()
+server.context.SubscriptionDB = new SubscriptionDB()
 
 // Domains
 server.context.Game = Game
+server.context.Subscription = Subscription
