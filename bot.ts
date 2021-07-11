@@ -4,20 +4,21 @@ dotenv.config()
 import { Client, Collection } from 'discord.js'
 import fs from 'fs'
 
-import { Command } from './interfaces'
-import Sentry from './config/sentry'
-import Logger from './config/logger'
-import { prefix, username } from './config/settings.json'
-import { gameEmbed, broadcast } from './services/discord'
-import { getSubscriptions, onInsert } from "./services/supabase";
+import { Command } from './src/interfaces'
+import Sentry from './src/config/sentry'
+import Logger from './src/config/logger'
+import { prefix, username } from './src/config/settings.json'
+import { gameEmbed, broadcast } from './src/services/discord'
+import { getSubscriptions, onInsert } from "./src/services/supabase";
 
 const client = new Client();
 client.login(process.env.DISCORD_TOKEN)
 
+// Load all commands
 const commands: Collection<string, Command> = new Collection()
-const commandFiles = fs.readdirSync('./commands').filter((file: string) => file.endsWith('.js'))
-commandFiles.forEach((file: string) => {
-  const command = require(`./commands/${file}`)
+const commandFiles = fs.readdirSync('./commands').filter((file: string) => file.endsWith('.ts'))
+commandFiles.forEach(async (file: string) => {
+  const command = await import(`./src/commands/${file}`)
   commands.set(command.name, command)
 })
 
