@@ -31,6 +31,5 @@
     "@typescript-eslint/parser": "^4.28.2",
     "eslint": "^7.30.0",
     "ts-node-dev": "^1.1.8"
-  },
-  "type": "module"
+  }
 }
