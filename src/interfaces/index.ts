@@ -1,3 +1,3 @@
 export * from './discord.interface'
-export * from './supabase.interface'
+export * from './models.interface'
 export * from './xbox.interface'

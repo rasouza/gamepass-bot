@@ -1,5 +1,4 @@
 import * as Sentry from '@sentry/node'
-import Tracing from '@sentry/tracing'
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,

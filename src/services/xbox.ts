@@ -1,6 +1,9 @@
 import axios from 'axios'
 import Logger from '../config/logger'
+import Game from '../domain/Game'
+import { XboxGame } from '../interfaces'
 
+// TODO: #2 intercepts all requests and log it
 const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'
 })
@@ -9,8 +12,20 @@ interface Sigls {
   id: string
 }
 
-// TODO: return a list of products
-async function getByIds(ids: string[]) {
+function toDomain(game: XboxGame): Game {
+
+  return new Game({
+    id: game.StoreId,
+    title: game.ProductTitle,
+    developer: game.DeveloperName,
+    image: game.ImageHero?.URI,
+    price: Number(game.Price?.MSRP.slice(1))*100 || null,
+    size: game.ApproximateSizeInBytes,
+    description: game.ProductDescription
+  })
+}
+
+export async function searchGames(ids: string[]): Promise<Game[]> {
   const params = {
     market: 'US',
     language: 'en-us',
@@ -22,23 +37,20 @@ async function getByIds(ids: string[]) {
   }
 
   const resp = await client.post('/products', data, { params })
-  Logger.silly(resp.data.Products)
+  const gameList: XboxGame[] = Object.values(resp.data.Products)
   
-  return resp.data.Products
+  return gameList.map(game => toDomain(game))
 }
 
-export async function getCatalog() {
+export async function getIdCatalog(): Promise<string[]> {
   const params = {
     id: 'fdd9e2a7-0fee-49f6-ad69-4354098401ff',
     language: 'en-us',
     market: 'US'
   }
-  const resp = await client.get('/sigls/v2', { params })
-  const ids = resp.data.slice(1).map((game: Sigls) => game.id)
-  Logger.debug(`Found ${ids.length} games`)
+  const sigls: Sigls[] = (await client.get('/sigls/v2', { params })).data.slice(1)
+  Logger.debug(`Found ${sigls.length} games`)
 
-  const games = getByIds(ids)
-
-  return games
+  return sigls.map(sigl => sigl.id)
 }
 

@@ -11,11 +11,11 @@ interface Price {
 } 
 
 export interface XboxGame {
-  StoreId: string
   ProductTitle: string,
   DeveloperName: string,
   ImageHero: Image,
   Price: Price,
   ApproximateSizeInBytes: number,
   ProductDescription: string,
+  StoreId: string
 }

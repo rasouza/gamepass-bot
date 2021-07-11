@@ -1,37 +1,46 @@
 import filesize from 'filesize'
-import { Webhook, MessageEmbed } from 'discord.js'
+import { Client, Webhook, MessageEmbed } from 'discord.js'
 
 import { username, avatarURL } from '../config/settings.json'
-import { Embed, Game } from '../interfaces'
+import Game from '../domain/Game'
 
 const MAX_LENGTH = 300
 
-// TODO: Move to domain
-export function gameEmbed({ title, description, developer, image, price, size}: Game): MessageEmbed {
-  
-  const config: Embed = {
-    title,
-    author: { name: developer },
-    image: { url: image }
-  }
+const client = new Client();
+client.login(process.env.DISCORD_TOKEN)
+export { client }
 
-  // Truncate large descriptions
-  if (description.length > MAX_LENGTH) {
-    config.description = `${description.slice(0, MAX_LENGTH)}...`
-  } else {
-    config.description = description
-  }
-
+export function createEmbed(game: Game): MessageEmbed {
   const msg = new MessageEmbed()
 
-  if (price) msg.addField('Price', `$${price/100}`, true)
-  if (size) msg.addField('Size', filesize(size), true)
+  // Truncate large descriptions
+  let description: string
+  if (game.description.length > MAX_LENGTH) {
+    description = `${game.description.slice(0, MAX_LENGTH)}...`
+  } else {
+    description = game.description
+  }
+
+  msg
+    .setTitle(game.title)
+    .setAuthor(game.developer)
+    .setDescription(description)
+
+  if (game.price) msg.addField('Price', `$${game.price/100}`, true)
+  if (game.size) msg.addField('Size', filesize(game.size), true)
+  if (game.image) msg.setImage(game.image)
 
   return msg
 }
 
-export function broadcast(webhooks: Webhook[], msg: string, embed: MessageEmbed) {
+export function broadcast(webhooks: Webhook[], msg: string, game: Game): void {
+  const embed = createEmbed(game)
+  
   webhooks.forEach(webhook => {
     webhook.send(msg, { username, avatarURL, embeds: [embed] })
   })
+}
+
+export async function getAllWebhooks(ids: string[]): Promise<Webhook[] | null> {
+  return await Promise.all(ids.map(id => client.fetchWebhook(id))) 
 }

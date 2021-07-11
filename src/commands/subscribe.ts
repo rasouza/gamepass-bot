@@ -1,19 +1,37 @@
-import { Collection, Message, TextChannel, Webhook } from 'discord.js'
+import { Message, TextChannel } from 'discord.js'
 import { username, avatarURL } from '../config/settings.json'
-import { newSubscription } from '../services/supabase'
+import Logger from '../config/logger'
+import SubscriptionDB from '../models/subscription'
+import Subscription from '../domain/Subscription'
+
+const db = new SubscriptionDB()
 
 export default {
   name: 'subscribe',
   description: 'Subscribe channel for Gamepass news',
-  async execute(message: Message, args: string[]) {
-    const webhooks: Collection<string,Webhook> = await (message.channel as TextChannel).fetchWebhooks()
+  async execute(message: Message): Promise<void> {
+    const webhooks = await (message.channel as TextChannel).fetchWebhooks()
     const webhook = webhooks.find(webhook => webhook.name ===  username)
     if (webhook) {
       message.reply('This channel is already subscribed.')
-    } else {
-      const webhook = await (message.channel as TextChannel).createWebhook(username, { avatar: avatarURL })
-      await newSubscription(webhook.channelID, webhook.id)
-      message.reply('Channel subscribed successfully! I\'m posting here whenever a new game is out on Game Pass.')
+      return
     }
+
+    const { 
+      id, 
+      channelID: channel, 
+      guildID: guild
+    } = await (message.channel as TextChannel).createWebhook(username, { avatar: avatarURL })
+
+    const sub = new Subscription({ id, channel, guild })
+    await db.insert(sub)
+
+    const nickname = message.member?.displayName
+    const channelName = (message.channel as TextChannel).name
+    const guildName = message.guild?.name
+    
+    Logger.info(`${nickname} subscribed to channel #${channelName} on ${guildName}`)
+    
+    message.reply('Channel subscribed successfully! I\'m posting here whenever a new game is out on Game Pass.')
   }
 }
