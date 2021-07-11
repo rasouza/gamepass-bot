@@ -3,7 +3,7 @@ require('dotenv').config();
 import { Client, Collection } from 'discord.js'
 import fs from 'fs'
 
-import { Command } from './_types'
+import { Command } from './interfaces'
 import Sentry from './config/sentry'
 import Logger from './config/logger'
 import { prefix, username } from './config/settings.json'
@@ -22,6 +22,8 @@ commandFiles.forEach((file: string) => {
 
 client.on('ready', async () => {
   const subscriptions = await getSubscriptions()
+  if (!subscriptions) return 
+  
   const webhooks = await Promise.all(subscriptions.map(sub => client.fetchWebhook(sub.webhook)))
 
   onInsert((payload) => {
