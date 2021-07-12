@@ -23,8 +23,8 @@ server.context.xbox = xbox
 
 // Models
 server.context.supabase = supabase
-server.context.GameDB = new GameDB()
-server.context.SubscriptionDB = new SubscriptionDB()
+server.context.gameDB = new GameDB()
+server.context.subscriptionDB = new SubscriptionDB()
 
 // Domains
 server.context.Game = Game

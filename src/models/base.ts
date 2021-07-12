@@ -8,57 +8,57 @@ interface PK {
 }
 
 export abstract class DB<Model extends PK, Domain> {
-  name: string
+  abstract name: string
   client = client
 
-  constructor (name: string) {
-    this.name = name
+  getTable () {
+    return this.client.from<Model>(this.name)
   }
 
   async getAll (): Promise<Model[] | null> {
-    const { data, error } = await this.client.from<Model>(this.name).select('*')
+    const { data, error } = await this.getTable().select('*')
     if (error) Logger.error(error)
 
     return data
   }
 
   async getAllById (ids: Model[keyof Model][]): Promise<Model[] | null> {
-    const { data, error } = await this.client.from<Model>(this.name).select('*').in('id', ids)
+    const { data, error } = await this.getTable().select('*').in('id', ids)
     if (error) Logger.error(error)
 
     return data
   }
 
   async getById (id: Model[keyof Model]): Promise<Model | null> {
-    const { data, error } = await this.client.from<Model>(this.name).select('*').eq('id', id).maybeSingle()
+    const { data, error } = await this.getTable().select('*').eq('id', id).maybeSingle()
     if (error) Logger.error(error)
 
     return data
   }
 
   async insert (domain: Domain | Domain[]): Promise<Model | Model[] | null> {
-    const { data, error } = await this.client.from<Model>(this.name).insert(domain)
+    const { data, error } = await this.getTable().insert(domain)
 
     if (error) Logger.error(error)
     return data
   }
 
   async update (id: Model[keyof Model], model: Model): Promise<Model | null> {
-    const { data, error } = await this.client.from<Model>(this.name).update(model).eq('id', id).single()
+    const { data, error } = await this.getTable().update(model).eq('id', id).single()
     if (error) Logger.error(error)
 
     return data
   }
 
   async delete (id: Model[keyof Model]): Promise<Model | null> {
-    const { data, error } = await this.client.from<Model>(this.name).delete().eq('id', id).single()
+    const { data, error } = await this.getTable().delete().eq('id', id).single()
     if (error) Logger.error(error)
 
     return data
   }
 
   async exists (id: Model[keyof Model]): Promise<boolean | null> {
-    const { data, error } = await this.client.from<Model>(this.name).select('*').eq('id', id).maybeSingle()
+    const { data, error } = await this.getTable().select('*').eq('id', id).maybeSingle()
     if (error) Logger.error(error)
 
     return !!data
