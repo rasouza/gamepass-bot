@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import repl from 'repl'
+import * as immutable from 'immutable'
 
 import * as xbox from './src/services/xbox'
 
@@ -16,9 +17,10 @@ import { client as supabase } from './src/models/base'
 
 const server = repl.start()
 
-server.context.discord = discord
+server.context.immutable = immutable
 
 // Services
+server.context.discord = discord
 server.context.xbox = xbox
 
 // Models

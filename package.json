@@ -21,6 +21,7 @@
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "filesize": "^6.4.0",
+    "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
     "ts-node": "^10.1.0",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-standard": "^16.0.3",
@@ -45,7 +47,15 @@
     "url": "https://github.com/rasouza/gamepass-bot.git"
   },
   "release": {
-    "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/github"]
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
-  
 }
