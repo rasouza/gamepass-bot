@@ -15,18 +15,18 @@ export abstract class DB<Model extends PK, Domain> {
     return this.client.from<Model>(this.name)
   }
 
-  async getAll (): Promise<Model[] | null> {
+  async getAll (): Promise<Model[]> {
     const { data, error } = await this.getTable().select('*')
     if (error) Logger.error(error)
 
-    return data
+    return data ?? []
   }
 
-  async getAllById (ids: Model[keyof Model][]): Promise<Model[] | null> {
+  async getAllById (ids: Model[keyof Model][]): Promise<Model[]> {
     const { data, error } = await this.getTable().select('*').in('id', ids)
     if (error) Logger.error(error)
 
-    return data
+    return data ?? []
   }
 
   async getById (id: Model[keyof Model]): Promise<Model | null> {
@@ -57,7 +57,7 @@ export abstract class DB<Model extends PK, Domain> {
     return data
   }
 
-  async exists (id: Model[keyof Model]): Promise<boolean | null> {
+  async exists (id: Model[keyof Model]): Promise<boolean> {
     const { data, error } = await this.getTable().select('*').eq('id', id).maybeSingle()
     if (error) Logger.error(error)
 
