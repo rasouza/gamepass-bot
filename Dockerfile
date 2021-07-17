@@ -10,6 +10,7 @@ WORKDIR $APP_DIR
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
+RUN yarn build
 
 
 # # Build the app

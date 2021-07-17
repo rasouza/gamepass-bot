@@ -10,7 +10,7 @@
     "sync": "ts-node-dev --poll sync.ts",
     "console": "ts-node-dev --experimental-repl-await --poll console.ts",
     "release": "semantic-release",
-    "build": "tsc --build"
+    "build": "tsc"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
