@@ -3,8 +3,5 @@ version: '3'
 services: 
   bot:
     build: .
-    volumes: 
-      - ".:/app"
-    working_dir: /app
     command: yarn start
         

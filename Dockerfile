@@ -8,9 +8,7 @@ ARG APP_DIR
 WORKDIR $APP_DIR
 
 COPY package.json yarn.lock ./
-
 RUN yarn install
-
 COPY . .
 
 
