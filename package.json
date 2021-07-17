@@ -6,12 +6,11 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "start": "ts-node bot.ts",
     "dev": "ts-node-dev --poll bot.ts",
-    "sync": "ts-node sync.ts",
-    "sync:dev": "ts-node-dev --poll sync.ts",
+    "sync": "ts-node-dev --poll sync.ts",
     "console": "ts-node-dev --experimental-repl-await --poll console.ts",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release",
+    "build": "tsc --build"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
