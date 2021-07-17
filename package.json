@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "dev": "ts-node-dev --poll bot.ts",
+    "start": "ts-node-dev --poll bot.ts",
     "sync": "ts-node-dev --poll sync.ts",
     "console": "ts-node-dev --experimental-repl-await --poll console.ts",
     "release": "semantic-release",
