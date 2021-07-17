@@ -2,7 +2,7 @@ version: '3'
 
 services: 
   bot:
-    image: node:16
+    build: .
     volumes: 
       - ".:/app"
     working_dir: /app
