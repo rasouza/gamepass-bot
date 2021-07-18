@@ -1,6 +1,6 @@
 {
   "name": "gamepass-bot",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
