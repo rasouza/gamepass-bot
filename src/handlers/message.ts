@@ -9,7 +9,7 @@ const COMMAND_RELATIVE = '../commands'
 const COMMAND_ABSOLUTE = './src/commands'
 
 const commands: Collection<string, Command> = new Collection()
-const commandFiles = readdirSync(COMMAND_ABSOLUTE).filter((file: string) => file.endsWith('.ts'))
+const commandFiles = readdirSync(COMMAND_ABSOLUTE).filter((file: string) => file.endsWith('.js'))
 commandFiles.forEach(async file => {
   const command = (await import(`${COMMAND_RELATIVE}/${file}`)).default
   commands.set(command.name, command)
