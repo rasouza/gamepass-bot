@@ -1,10 +1,12 @@
 import filesize from 'filesize'
 import { Client, Webhook, MessageEmbed } from 'discord.js'
 
-import { username, avatarURL } from '../config/settings.json'
-import Game from '../domain/Game'
+import Settings from '../config/settings.js'
+import Game from '../domain/Game.js'
 
 const MAX_LENGTH = 300
+
+const { username, avatarURL } = Settings
 
 const client = new Client()
 client.login(process.env.DISCORD_TOKEN)

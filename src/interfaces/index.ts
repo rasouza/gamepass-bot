@@ -1,3 +1,3 @@
-export * from './discord.interface'
-export * from './models.interface'
-export * from './xbox.interface'
+export * from './discord.interface.js'
+export * from './models.interface.js'
+export * from './xbox.interface.js'
