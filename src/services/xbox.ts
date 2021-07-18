@@ -36,7 +36,7 @@ function toDomain (game: XboxGame): Game {
     title: game.ProductTitle,
     developer: game.DeveloperName,
     image: game.ImageHero?.URI,
-    price: Number(game.Price?.MSRP.slice(1)) * 100 || null,
+    price: Math.round(Number(game.Price?.MSRP.slice(1)) * 100) || null,
     size: game.ApproximateSizeInBytes,
     description: game.ProductDescription
   })

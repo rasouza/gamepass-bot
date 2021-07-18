@@ -11,6 +11,8 @@ import { startTransaction } from '../src/config/sentry.js'
 
 const gameDB = new GameDB()
 
+// TODO: add --dry-run option
+
 async function sync () {
   Logger.info('Sync started! Checking new games...')
   const transaction = startTransaction('XBox Sync')
