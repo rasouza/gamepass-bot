@@ -1,14 +1,14 @@
-import fs from 'fs'
-
+import { readdirSync, readFileSync } from 'fs'
 import { Collection, Message } from 'discord.js'
 import { Command } from '../interfaces'
-import { prefix } from '../config/settings.json'
+
+const { prefix } = JSON.parse(readFileSync('../config/settings.json', 'utf8'))
 
 const COMMAND_RELATIVE = '../commands'
 const COMMAND_ABSOLUTE = './src/commands'
 
 const commands: Collection<string, Command> = new Collection()
-const commandFiles = fs.readdirSync(COMMAND_ABSOLUTE).filter((file: string) => file.endsWith('.ts'))
+const commandFiles = readdirSync(COMMAND_ABSOLUTE).filter((file: string) => file.endsWith('.ts'))
 commandFiles.forEach(async file => {
   const command = (await import(`${COMMAND_RELATIVE}/${file}`)).default
   commands.set(command.name, command)

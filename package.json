@@ -4,6 +4,7 @@
   "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "start": "ts-node-dev --poll bin/bot.ts",

@@ -1,11 +1,12 @@
+import { readFileSync } from 'fs'
 import filesize from 'filesize'
 import { Client, Webhook, MessageEmbed } from 'discord.js'
 
-import { username, avatarURL } from '../config/settings.json'
 import Game from '../domain/Game'
 
 const MAX_LENGTH = 300
 
+const { username, avatarURL } = JSON.parse(readFileSync('../config/settings.json', 'utf8'))
 const client = new Client()
 client.login(process.env.DISCORD_TOKEN)
 export { client }
