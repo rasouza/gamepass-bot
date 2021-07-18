@@ -1,17 +1,19 @@
 
 import { Set } from 'immutable'
-import dotenv from 'dotenv'
-dotenv.config()
-
-import { getIdCatalog, searchGames } from '../src/services/xbox.js'
-import GameDB from '../src/models/game.js'
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
 import Logger from '../src/config/logger.js'
 import { startTransaction } from '../src/config/sentry.js'
+import { getIdCatalog, searchGames } from '../src/services/xbox.js'
+import GameDB from '../src/models/game.js'
 
 const gameDB = new GameDB()
 
-// TODO: add --dry-run option
+const argv = yargs(hideBin(process.argv)).options({
+  dryRun: { type: 'boolean' }
+}).parseSync()
+if (argv.dryRun) Logger.info('running on dry run mode')
 
 async function sync () {
   Logger.info('Sync started! Checking new games...')
@@ -25,14 +27,16 @@ async function sync () {
 
   if (insertDiff.size > 0) {
     const newGames = await searchGames(insertDiff.toArray())
-    gameDB.insert(newGames)
+    if (!argv.dryRun) gameDB.insert(newGames)
     Logger.info('New games inserted', { newGames })
   }
 
   if (cleanupDiff.size > 0) {
     cleanupDiff.forEach(async id => {
-      const game = await gameDB.delete(id)
-      Logger.info(`${game?.title} is being deleted`, { game })
+      if (!argv.dryRun) {
+        const game = await gameDB.delete(id)
+        Logger.info(`${game?.title} is being deleted`, { game })
+      }
     })
   }
 

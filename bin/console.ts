@@ -1,6 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 import repl from 'repl'
 import * as immutable from 'immutable'
 
