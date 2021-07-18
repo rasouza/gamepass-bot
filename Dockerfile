@@ -1,8 +1,7 @@
 ARG NODE_VERSION=16
 ARG APP_DIR=/app
 
-# Creates the builder image and fetch dependencies
-FROM node:$NODE_VERSION as build
+FROM node:$NODE_VERSION
 
 ARG APP_DIR
 WORKDIR $APP_DIR
