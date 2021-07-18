@@ -7,9 +7,11 @@
   "type": "module",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "start": "ts-node-dev --poll bin/bot.ts",
-    "sync": "ts-node-dev --poll bin/sync.ts",
-    "console": "ts-node-dev --experimental-repl-await --poll bin/console.ts",
+    "start": "tsc && node dist/bin/bot.js",
+    "start:dev": "tsc && nodemon -r dotenv/config dist/bin/bot.js",
+    "sync": "tsc && node dist/bin/sync.js",
+    "sync:dev": "tsc && nodemon -r dotenv/config dist/bin/sync.js",
+    "console": "tsc && node -r dotenv/config dist/bin/console.js",
     "release": "semantic-release",
     "build": "tsc"
   },
@@ -19,13 +21,10 @@
     "@supabase/supabase-js": "^1.18.1",
     "axios": "^0.21.1",
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0",
     "filesize": "^6.4.0",
     "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
-    "ts-node": "^10.1.0",
-    "typescript": "^4.3.5",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0"
   },
@@ -33,6 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "cz-conventional-changelog": "3.3.0",
+    "dotenv": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-standard": "^16.0.3",
@@ -40,7 +40,7 @@
     "eslint-plugin-node": "^11.1.0",
     "semantic-release": "^17.4.4",
     "standard": "^16.0.3",
-    "ts-node-dev": "^1.1.8"
+    "typescript": "^4.3.5"
   },
   "repository": {
     "type": "git",
