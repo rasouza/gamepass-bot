@@ -1,1 +1,1 @@
-worker: yarn start
+worker: npx tsc && yarn start
