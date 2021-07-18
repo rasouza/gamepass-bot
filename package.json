@@ -5,19 +5,14 @@
   "author": "R. A. Souza",
   "license": "MIT",
   "type": "module",
-  "private":true,
+  "private": true,
   "scripts": {
     "lint": "eslint . --ext .ts",
     "start": "node dist/bin/bot.js",
     "sync": "node dist/bin/sync.js",
-    "start:dev": "nodemon -r dotenv/config dist/bin/bot.js",
-    "prestart:dev": "tsc",
-    "presync:dev": "tsc",
-    "preconsole": "tsc",
-    "sync:dev": "nodemon -r dotenv/config dist/bin/sync.js",
     "console": "node -r dotenv/config dist/bin/console.js",
-    "release": "semantic-release",
-    "build": "tsc"
+    "build": "tsc",
+    "get-version": "echo $npm_package_version"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
@@ -30,9 +25,11 @@
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
     "winston": "^3.3.3",
-    "winston-dev-format": "^0.2.0"
+    "winston-dev-format": "^0.2.0",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
+    "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "cz-conventional-changelog": "3.3.0",
@@ -44,6 +41,8 @@
     "eslint-plugin-node": "^11.1.0",
     "semantic-release": "^17.4.4",
     "standard": "^16.0.3",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
   },
   "repository": {
