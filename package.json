@@ -1,6 +1,6 @@
 {
   "name": "gamepass-bot",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
@@ -12,7 +12,8 @@
     "sync": "node dist/bin/sync.js",
     "console": "node -r dotenv/config dist/bin/console.js",
     "build": "tsc",
-    "get-version": "echo $npm_package_version"
+    "get-version": "echo $npm_package_version",
+    "postversion": "git add package.json && git commit -m \"[skip ci] bump package.json version up\" && git push origin master"
   },
   "dependencies": {
     "@sentry/node": "^6.8.0",
