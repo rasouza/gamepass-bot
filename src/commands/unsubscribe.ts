@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { Message, TextChannel } from 'discord.js'
-import SubscriptionDB from '../models/subscription'
+import SubscriptionDB from '../models/subscription.js'
 
 const { username } = JSON.parse(readFileSync('../config/settings.json', 'utf8'))
 

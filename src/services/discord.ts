@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 import filesize from 'filesize'
 import { Client, Webhook, MessageEmbed } from 'discord.js'
 
-import Game from '../domain/Game'
+import Game from '../domain/Game.js'
 
 const MAX_LENGTH = 300
 

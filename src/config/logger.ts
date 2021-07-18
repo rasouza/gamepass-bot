@@ -1,7 +1,8 @@
-import { createLogger, format, transports } from 'winston'
+import winston from 'winston'
 import LogDnaWinston from 'logdna-winston'
 import devFormat from 'winston-dev-format'
 
+const { createLogger, format, transports } = winston
 const { combine, timestamp, json, metadata, colorize } = format
 const { Console } = transports
 

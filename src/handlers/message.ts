@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'fs'
 import { Collection, Message } from 'discord.js'
-import { Command } from '../interfaces'
+import { Command } from '../interfaces/index.js'
 
 const { prefix } = JSON.parse(readFileSync('../config/settings.json', 'utf8'))
 
