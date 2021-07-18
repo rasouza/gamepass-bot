@@ -1,6 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 import Sentry from '../src/config/sentry.js'
 import messageHandler from '../src/handlers/message.js'
 import readyHandler from '../src/handlers/ready.js'
