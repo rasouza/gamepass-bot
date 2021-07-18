@@ -6,10 +6,11 @@ import Settings from '../config/settings.js'
 const { prefix } = Settings
 
 const COMMAND_RELATIVE = '../commands'
-const COMMAND_ABSOLUTE = './src/commands'
+const COMMAND_ABSOLUTE = './dist/src/commands'
 
 const commands: Collection<string, Command> = new Collection()
 const commandFiles = readdirSync(COMMAND_ABSOLUTE).filter((file: string) => file.endsWith('.js'))
+console.log('commandFiles', commandFiles)
 commandFiles.forEach(async file => {
   const command = (await import(`${COMMAND_RELATIVE}/${file}`)).default
   commands.set(command.name, command)
@@ -21,7 +22,6 @@ export default function messageHandler (message: Message): void {
   const args = message.content.slice(prefix.length).trim().split(/ +/)
   const command = args.shift()?.toLowerCase()
   if (!command || !commands.has(command)) return
-
   try {
     commands.get(command)?.execute(message, args)
   } catch (error) {
