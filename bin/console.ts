@@ -4,16 +4,16 @@ dotenv.config()
 import repl from 'repl'
 import * as immutable from 'immutable'
 
-import * as xbox from './src/services/xbox'
+import * as xbox from '../src/services/xbox'
 
-import GameDB from './src/models/game'
-import SubscriptionDB from './src/models/subscription'
+import GameDB from '../src/models/game'
+import SubscriptionDB from '../src/models/subscription'
 
-import Game from './src/domain/Game'
-import Subscription from './src/domain/Subscription'
+import Game from '../src/domain/Game'
+import Subscription from '../src/domain/Subscription'
 
-import { client as discord } from './src/services/discord'
-import { client as supabase } from './src/models/base'
+import { client as discord } from '../src/services/discord'
+import { client as supabase } from '../src/models/base'
 
 const server = repl.start()
 

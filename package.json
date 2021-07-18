@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "start": "ts-node-dev --poll bot.ts",
-    "sync": "ts-node-dev --poll sync.ts",
-    "console": "ts-node-dev --experimental-repl-await --poll console.ts",
+    "start": "ts-node-dev --poll bin/bot.ts",
+    "sync": "ts-node-dev --poll bin/sync.ts",
+    "console": "ts-node-dev --experimental-repl-await --poll bin/console.ts",
     "release": "semantic-release",
     "build": "tsc"
   },

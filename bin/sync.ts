@@ -3,11 +3,11 @@ import { Set } from 'immutable'
 import dotenv from 'dotenv'
 dotenv.config()
 
-import { getIdCatalog, searchGames } from './src/services/xbox'
-import GameDB from './src/models/game'
+import { getIdCatalog, searchGames } from '../src/services/xbox'
+import GameDB from '../src/models/game'
 
-import Logger from './src/config/logger'
-import { startTransaction } from './src/config/sentry'
+import Logger from '../src/config/logger'
+import { startTransaction } from '../src/config/sentry'
 
 const gameDB = new GameDB()
 
