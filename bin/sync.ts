@@ -28,14 +28,14 @@ async function sync () {
   if (insertDiff.size > 0) {
     const newGames = await searchGames(insertDiff.toArray())
     if (!argv.dryRun) gameDB.insert(newGames)
-    Logger.info('New games inserted', { newGames })
+    Logger.debug('New games inserted', { newGames })
   }
 
   if (cleanupDiff.size > 0) {
     cleanupDiff.forEach(async id => {
       if (!argv.dryRun) {
         const game = await gameDB.delete(id)
-        Logger.info(`${game?.title} is being deleted`, { game })
+        Logger.debug(`${game?.title} is being deleted`, { game })
       }
     })
   }
