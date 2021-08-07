@@ -1,0 +1,432 @@
+[
+    {
+        "scope": "https://catalog.gamepass.com:443",
+        "method": "POST",
+        "path": "/products?market=US&language=en-us&hydration=MobileDetailsForConsole",
+        "body": {
+            "Products": [
+                "9ND0CG3LM22K",
+                "9NJWTJSVGVLJ"
+            ]
+        },
+        "status": 200,
+        "response": {
+            "Products": {
+                "9ND0CG3LM22K": {
+                    "ConsolePlatformPreinstallable": false,
+                    "ApproximateSizeInBytes": null,
+                    "Attributes": [
+                        {
+                            "Name": "BroadcastSupport",
+                            "LocalizedName": "",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblAchievements",
+                            "LocalizedName": "Xbox achievements",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblPresence",
+                            "LocalizedName": "Xbox presence",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblClubs",
+                            "LocalizedName": "Xbox clubs",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XboxLive",
+                            "LocalizedName": "Xbox Live",
+                            "ApplicablePlatforms": null
+                        }
+                    ],
+                    "ConsoleComingSoonDate": null,
+                    "ConsoleCrossGenSiblings": null,
+                    "XboxConsoleGenCompatible": null,
+                    "XboxTitleId": "1686368600",
+                    "ProductTitle": "A Plague Tale: Innocence - Windows 10",
+                    "ProductDescription": "Follow the grim tale of young Amicia and her little brother Hugo, in a heartrending journey through the darkest hours of history. Hunted by Inquisition soldiers and surrounded by unstoppable swarms of rats, Amicia and Hugo will come to know and trust each other. As they struggle to survive against overwhelming odds, they will fight to find purpose in this brutal, unforgiving world.",
+                    "ProductType": "Game",
+                    "DeveloperName": "Asobo Studio",
+                    "PublisherName": "Focus Home Interactive",
+                    "ReviewScore": 4.6,
+                    "ReviewCount": 6850,
+                    "ImageTile": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.61900.68306748966338141.e6f96fac-aa67-4f59-9043-10654607aa79.7472e56d-b2da-462f-8312-d12050d56ec6",
+                        "Width": 1080,
+                        "Height": 1080
+                    },
+                    "ImageHero": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.49740.68306748966338141.e6f96fac-aa67-4f59-9043-10654607aa79.4bb59d7f-53c0-43d1-9ef2-20f2de8e893a",
+                        "Width": 1920,
+                        "Height": 1080
+                    },
+                    "ImagePoster": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.14356.68306748966338141.e6f96fac-aa67-4f59-9043-10654607aa79.aa73acc4-f944-4ab1-83c3-265506b1529d",
+                        "Width": 720,
+                        "Height": 1080
+                    },
+                    "Screenshots": [
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.30546.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.7fcbb4ea-29f0-48cf-b14a-3ed4223916a0",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.64802.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.dc458d66-a8e7-462b-9745-03a4085f63b9",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.18671.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.b1197dca-669a-4d12-ae92-64c7071ca531",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.34752.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.551d5ef7-948a-4840-bb2e-1ec7e5b3c73f",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.9845.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.b723ece7-2573-4b5a-ab38-f11d3b309b19",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.50149.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.759e72ee-e2dc-433b-8eee-920befa957cc",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.34286.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.15e8cac0-c2c2-4b92-a2eb-cb670b63bb51",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.11986.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.df9664f2-f8d6-4826-bd06-a6b300da366c",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.15480.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.e18bdccc-34b0-4e5d-b778-2480a0e1ee15",
+                            "Width": 1920,
+                            "Height": 1080
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.52840.13558110806647450.785aaa6b-d3b1-420b-90db-60148ed7c454.542788ae-fff0-41de-9507-4d35dfde77d6",
+                            "Width": 1920,
+                            "Height": 1080
+                        }
+                    ],
+                    "Trailers": [
+                        {
+                            "Title": "Accolade Trailer",
+                            "URI": "http://universalstore.streaming.mediaservices.windows.net/ab3e2be8-bfb9-4dfc-8068-9324ef7dcb40/23b10afe-a333-4f40-a1cb-da052ff6.ism/manifest",
+                            "PreviewImageURI": "https://store-images.s-microsoft.com/image/apps.16759.68306748966338141.e6f96fac-aa67-4f59-9043-10654607aa79.6c2a0a16-4174-45c2-b172-a271d4125e3a"
+                        },
+                        {
+                            "Title": "The Little Boy Lost",
+                            "URI": "http://universalstore.streaming.mediaservices.windows.net/74a805b4-aa52-49f9-b784-ba1cfc27e9b1/741ce7ba-2770-4c77-9180-6af8142b.ism/manifest",
+                            "PreviewImageURI": "https://store-images.s-microsoft.com/image/apps.48761.68306748966338141.e6f96fac-aa67-4f59-9043-10654607aa79.9fdf1c54-f244-4b76-b01d-5539f607e755"
+                        }
+                    ],
+                    "Categories": [
+                        "Action & adventure",
+                        "Role playing"
+                    ],
+                    "AllowedPlatforms": [
+                        "Windows.Desktop"
+                    ],
+                    "ContentRating": {
+                        "RatingSystem": "ESRB",
+                        "RatingSystemLongName": "Entertainment Software Rating Board",
+                        "RatingSystemUrl": "http://www.esrb.org/ratings/ratings_guide.aspx",
+                        "RatingId": "ESRB:M",
+                        "RatingValue": "MATURE 17+",
+                        "Description": "For ages 17 and up",
+                        "RatingAge": 17,
+                        "RatingValueLogoUrl": "https://store-images.microsoft.com/image/global.53975.image.32437939-2f27-4e79-8431-5f5866f32908.3dc74b18-4153-423c-b367-bdcfd34ac658",
+                        "RatingDescriptors": [
+                            "Blood and Gore",
+                            "Strong Language",
+                            "Violence"
+                        ],
+                        "RatingDisclaimers": [],
+                        "InteractiveElements": []
+                    },
+                    "XPAEnabled": false,
+                    "UltimateComingSoonDate": null,
+                    "IsEAPlay": false,
+                    "RequiresXboxLiveGold": false,
+                    "InitialAddOnProducts": [],
+                    "RemainingAddOnProductStoreIds": [],
+                    "Price": null,
+                    "LanguageSupport": {},
+                    "StoreId": "9ND0CG3LM22K"
+                },
+                "9NJWTJSVGVLJ": {
+                    "ConsolePlatformPreinstallable": false,
+                    "ApproximateSizeInBytes": null,
+                    "Attributes": [
+                        {
+                            "Name": "XblOnlineMultiPlayer",
+                            "LocalizedName": "Online multiplayer  (2-8)",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "BroadcastSupport",
+                            "LocalizedName": "",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblCrossPlatformMultiPlayer",
+                            "LocalizedName": "Xbox cross-platform multiplayer",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblAchievements",
+                            "LocalizedName": "Xbox achievements",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblPresence",
+                            "LocalizedName": "Xbox presence",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblClubs",
+                            "LocalizedName": "Xbox clubs",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XblCloudSaves",
+                            "LocalizedName": "Xbox cloud saves",
+                            "ApplicablePlatforms": null
+                        },
+                        {
+                            "Name": "XboxLive",
+                            "LocalizedName": "Xbox Live",
+                            "ApplicablePlatforms": null
+                        }
+                    ],
+                    "ConsoleComingSoonDate": null,
+                    "ConsoleCrossGenSiblings": null,
+                    "XboxConsoleGenCompatible": null,
+                    "XboxTitleId": "1755599316",
+                    "ProductTitle": "Age of Empires Definitive Edition",
+                    "ProductDescription": "Age of Empires, the pivotal RTS that launched a 20-year legacy returns in definitive form for Windows 10 PCs. Bringing together all of the officially released content with modernized gameplay, all-new visuals and a host of other new features, Age of Empires: Definitive Edition is the complete RTS package. Engage in over 40 hours of updated campaign content with new narration and pacing, jump online in up to 8-player battles with new competitive features and modes, experience 4K HD visuals with overhauled animations, get creative with the scenario builder and share your creations. There’s never been a better time to jump in to Age of Empires. Welcome back to history.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n* Requires a free Xbox Live account.",
+                    "ProductType": "Game",
+                    "DeveloperName": "Forgotten Empires",
+                    "PublisherName": "Xbox Game Studios",
+                    "ReviewScore": 3.2,
+                    "ReviewCount": 1948,
+                    "ImageTile": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.61945.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.edb3f732-9767-4571-8947-4bf839a08f2e",
+                        "Width": 1080,
+                        "Height": 1080
+                    },
+                    "ImageHero": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.28129.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.5eb8b4f3-3575-4d13-b0a4-b60d6c64f392",
+                        "Width": 2400,
+                        "Height": 1200
+                    },
+                    "ImagePoster": {
+                        "URI": "https://store-images.s-microsoft.com/image/apps.2072.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.b81c0b81-e80e-4500-bdc7-0939f60b77bc",
+                        "Width": 720,
+                        "Height": 1080
+                    },
+                    "Screenshots": [
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.47758.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.aed47fff-d756-4ed0-878d-ca2187620409",
+                            "Width": 3840,
+                            "Height": 2160
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.47029.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.ab2c933c-e65e-4fc8-ae0f-3f67770b02d1",
+                            "Width": 3840,
+                            "Height": 2160
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.41556.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.bc697677-7f4d-4b17-aaae-362123302b5a",
+                            "Width": 3840,
+                            "Height": 2160
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.49352.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.64d86237-2787-4379-9feb-b7a8df4b1c0f",
+                            "Width": 3840,
+                            "Height": 2160
+                        },
+                        {
+                            "URI": "https://store-images.s-microsoft.com/image/apps.51048.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.28fe1a27-3e0f-4605-b852-451e5013bc2b",
+                            "Width": 3840,
+                            "Height": 2160
+                        }
+                    ],
+                    "Trailers": [
+                        {
+                            "Title": "Age of Empires: Definitive Edition",
+                            "URI": "http://universalstore.streaming.mediaservices.windows.net/932a0355-2c91-4b47-8881-daf7431172da/c09c76a2-a298-4a94-b052-9e5d44c9.ism/manifest",
+                            "PreviewImageURI": "https://store-images.s-microsoft.com/image/apps.4989.13672427983916579.274b1ffd-9cde-4bef-9a3e-6f37073d5ed0.8cdc2c04-fc2c-459e-862f-37d6d2daf680"
+                        }
+                    ],
+                    "Categories": [
+                        "Strategy"
+                    ],
+                    "AllowedPlatforms": [
+                        "Windows.Desktop"
+                    ],
+                    "ContentRating": {
+                        "RatingSystem": "ESRB",
+                        "RatingSystemLongName": "Entertainment Software Rating Board",
+                        "RatingSystemUrl": "http://www.esrb.org/ratings/ratings_guide.aspx",
+                        "RatingId": "ESRB:T",
+                        "RatingValue": "TEEN",
+                        "Description": "For ages 13 and up",
+                        "RatingAge": 13,
+                        "RatingValueLogoUrl": "https://store-images.microsoft.com/image/global.17268.image.4cc004ee-a56d-4f11-ae99-67a89379b743.13d51d69-d3ba-4760-8fdf-f996abafa50a",
+                        "RatingDescriptors": [
+                            "Blood",
+                            "Mild Violence"
+                        ],
+                        "RatingDisclaimers": [],
+                        "InteractiveElements": [
+                            "Users Interact"
+                        ]
+                    },
+                    "XPAEnabled": false,
+                    "UltimateComingSoonDate": null,
+                    "IsEAPlay": false,
+                    "RequiresXboxLiveGold": false,
+                    "InitialAddOnProducts": [],
+                    "RemainingAddOnProductStoreIds": [],
+                    "Price": null,
+                    "LanguageSupport": {
+                        "de-DE": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "en-US": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "es-ES": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "es-MX": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "fr-FR": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "it-IT": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "ja-JP": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "ko-KR": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "pt-BR": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 0,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "ru-RU": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 0,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "zh-CN": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        },
+                        "zh-TW": {
+                            "InterfaceLanguageSupport": 1,
+                            "GamePlayAudioLanguageSupport": 1,
+                            "SubtitlesLanguageSupport": 1
+                        }
+                    },
+                    "StoreId": "9NJWTJSVGVLJ"
+                }
+            },
+            "InvalidIds": []
+        },
+        "rawHeaders": [
+            "Content-Length",
+            "11027",
+            "Content-Type",
+            "application/json",
+            "MS-CV",
+            "gerX6wB0lkWQ6EqL3fwXNQ.0",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-Store-Authorization-Specified",
+            "False",
+            "Cache-Control",
+            "private, max-age=0",
+            "Expires",
+            "Sat, 07 Aug 2021 06:22:55 GMT",
+            "Date",
+            "Sat, 07 Aug 2021 06:22:55 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "https://catalog.gamepass.com:443",
+        "method": "POST",
+        "path": "/products?market=US&language=en-us&hydration=MobileDetailsForConsole",
+        "body": {
+            "Products": [
+                "test"
+            ]
+        },
+        "status": 200,
+        "response": {
+            "Products": {},
+            "InvalidIds": [
+                "TEST"
+            ]
+        },
+        "rawHeaders": [
+            "Content-Length",
+            "37",
+            "Content-Type",
+            "application/json",
+            "MS-CV",
+            "PEjFTbvP9kmgI3Hj/l4G7w.0",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-Store-Authorization-Specified",
+            "False",
+            "Cache-Control",
+            "private, max-age=0",
+            "Expires",
+            "Sat, 07 Aug 2021 06:22:55 GMT",
+            "Date",
+            "Sat, 07 Aug 2021 06:22:55 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    }
+]
