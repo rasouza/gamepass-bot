@@ -1,4 +1,4 @@
-import { GameModel } from '../interfaces/index.js'
+import { GameModel } from '@/interfaces'
 
 export default class Game {
   id: string

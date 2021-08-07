@@ -1,7 +1,7 @@
 import axios from 'axios'
-import Logger from '../config/logger.js'
-import Game from '../domain/Game.js'
-import { XboxGame } from '../interfaces/index.js'
+import Logger from '@/config/logger'
+import Game from '@/domain/Game'
+import { XboxGame } from '@/interfaces'
 
 const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'

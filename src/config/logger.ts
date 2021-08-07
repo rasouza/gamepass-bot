@@ -8,13 +8,16 @@ const { Console } = transports
 
 const isLocal = process.env.NODE_ENV === 'local'
 
-const tty = new Console()
-const logDNA = new LogDnaWinston({
-  key: process.env.LOGDNA_KEY,
-  indexMeta: true,
-  handleExceptions: true,
-  app: 'gamepass-bot'
-})
+const logs: winston.transport[] = []
+if (process.env.LOGDNA_KEY) {
+  logs.push(new LogDnaWinston({
+    key: process.env.LOGDNA_KEY,
+    indexMeta: true,
+    handleExceptions: true,
+    app: 'gamepass-bot'
+  }))
+}
+logs.push(new Console())
 
 // Note: Order matters!
 const defaultFormat = combine(
@@ -29,8 +32,8 @@ const localFormat = combine(
 )
 
 export default createLogger({
-  transports: [tty, logDNA],
-  exceptionHandlers: [tty],
+  transports: logs,
+  exceptionHandlers: logs,
   level: process.env.LOG_LEVEL || 'info',
   format: isLocal ? localFormat : defaultFormat
 })

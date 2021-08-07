@@ -1,8 +1,8 @@
-import Logger from '../config/logger.js'
+import Logger from '@/config/logger'
 
-import Game from '../domain/Game.js'
-import { GameModel } from '../interfaces/index.js'
-import { DB } from './base.js'
+import Game from '@/domain/Game'
+import { GameModel } from '@/interfaces'
+import { DB } from './base'
 
 export default class GameDB extends DB<GameModel, Game> {
   name = 'games'

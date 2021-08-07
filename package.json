@@ -4,7 +4,6 @@
   "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
-  "type": "module",
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .ts",
@@ -12,10 +11,9 @@
     "build": "tsc",
     "start": "node dist/bin/bot.js",
     "sync": "node dist/bin/sync.js",
-    "console": "nodemon -r dotenv/config dist/bin/console.js",
-    "watch-ts": "tsc -w",
-    "watch-bot": "nodemon --watch src -r dotenv/config dist/bin/bot.js",
-    "watch-sync": "nodemon --watch src -r dotenv/config dist/bin/sync.js --dry-run",
+    "console": "nodemon -x ts-node bin/console.ts",
+    "watch-bot": "nodemon -x ts-node bin/bot.ts",
+    "watch-sync": "nodemon -x ts-node dist/bin/sync.js --dry-run",
     "watch": "concurrently -k -c \"cyan.bold\" \"npm:watch-*\"",
     "get-version": "echo $npm_package_version",
     "postversion": "git add package.json && git commit -m \"[skip ci] bump package.json version up\" && git push origin master"
@@ -30,6 +28,7 @@
     "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
+    "module-alias": "^2.2.2",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0",
     "yargs": "^17.0.1"
@@ -53,11 +52,16 @@
     "semantic-release": "^17.4.4",
     "standard": "^16.0.3",
     "ts-jest": "^27.0.4",
+    "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/rasouza/gamepass-bot.git"
+  },
+  "_moduleAliases": {
+    "@": "dist/src"
   },
   "release": {
     "plugins": [

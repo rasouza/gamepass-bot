@@ -1,7 +1,7 @@
-import { getAllWebhooks, broadcast } from '../services/discord.js'
-import SubscriptionDB from '../models/subscription.js'
-import GameDB from '../models/game.js'
-import Logger from '../config/logger.js'
+import { getAllWebhooks, broadcast } from '@/services/discord'
+import SubscriptionDB from '@/models/subscription'
+import GameDB from '@/models/game'
+import Logger from '@/config/logger'
 
 const subDB = new SubscriptionDB()
 const gameDB = new GameDB()

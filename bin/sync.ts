@@ -1,12 +1,13 @@
+import 'module-alias/register'
 
 import { Set } from 'immutable'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
-import Logger from '../src/config/logger.js'
-import { startTransaction } from '../src/config/sentry.js'
-import { getIdCatalog, searchGames } from '../src/services/xbox.js'
-import GameDB from '../src/models/game.js'
+import Logger from '@/config/logger'
+import { startTransaction } from '@/config/sentry'
+import { getIdCatalog, searchGames } from '@/services/xbox'
+import GameDB from '@/models/game'
 
 const gameDB = new GameDB()
 

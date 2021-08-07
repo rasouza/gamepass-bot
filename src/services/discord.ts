@@ -1,8 +1,8 @@
 import filesize from 'filesize'
 import { Client, Webhook, MessageEmbed } from 'discord.js'
 
-import Settings from '../config/settings.js'
-import Game from '../domain/Game.js'
+import Settings from '@/config/settings'
+import Game from '@/domain/Game'
 
 const MAX_LENGTH = 300
 

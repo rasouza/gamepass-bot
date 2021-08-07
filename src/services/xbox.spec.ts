@@ -1,7 +1,7 @@
 import path from 'path'
 import { back as nockBack } from 'nock'
 import { getIdCatalog, searchGames } from './xbox'
-import Game from 'domain/Game'
+import Game from '@/domain/Game'
 
 nockBack.fixtures = path.join(__dirname, '__fixtures__')
 nockBack.setMode('record')

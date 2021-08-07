@@ -1,4 +1,4 @@
-import { SubscriptionModel } from '../interfaces/index.js'
+import { SubscriptionModel } from '@/interfaces'
 
 export default class Subscription {
   id: string
