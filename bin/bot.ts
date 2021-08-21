@@ -1,7 +1,9 @@
-import Sentry from '../src/config/sentry.js'
-import messageHandler from '../src/handlers/message.js'
-import readyHandler from '../src/handlers/ready.js'
-import { client } from '../src/services/discord.js'
+import 'module-alias/register'
+
+import Sentry from '@/config/sentry'
+import messageHandler from '@/handlers/message'
+import readyHandler from '@/handlers/ready'
+import { client } from '@/services/discord'
 
 client.on('ready', readyHandler)
 client.on('message', messageHandler)

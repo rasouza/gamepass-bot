@@ -1,7 +1,6 @@
-import Subscription from '../domain/Subscription.js'
-import { SubscriptionModel } from '../interfaces/index.js'
-import { DB } from './base.js'
+import Subscription from '@/domain/Subscription'
+import { DB } from './base'
 
-export default class SubscriptionDB extends DB<SubscriptionModel, Subscription> {
+export default class SubscriptionDB extends DB<Subscription> {
   name = 'subscriptions'
 }

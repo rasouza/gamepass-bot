@@ -1,0 +1,911 @@
+[
+    {
+        "scope": "https://catalog.gamepass.com:443",
+        "method": "GET",
+        "path": "/sigls/v2?id=fdd9e2a7-0fee-49f6-ad69-4354098401ff&language=en-us&market=US",
+        "body": "",
+        "status": 200,
+        "response": [
+            {
+                "siglId": "fdd9e2a7-0fee-49f6-ad69-4354098401ff",
+                "title": "All PC Games",
+                "description": "Explore every game included with Xbox Game Pass PC",
+                "requiresShuffling": "False",
+                "imageUrl": "http://store-images.s-microsoft.com/image/global.47673.acentoprodimg.40520333-055e-420a-bd6e-39b85591ccd3.65c04579-754f-40be-a1f2-f0e983dba803"
+            },
+            {
+                "id": "9ND0CG3LM22K"
+            },
+            {
+                "id": "9NJWTJSVGVLJ"
+            },
+            {
+                "id": "9NJDD0JGPP2Q"
+            },
+            {
+                "id": "9N1HF804QXN4"
+            },
+            {
+                "id": "9NSRJ872SGH7"
+            },
+            {
+                "id": "9NG07QJNK38J"
+            },
+            {
+                "id": "9NR6DZ9F76P8"
+            },
+            {
+                "id": "9MT8ND8BS6NB"
+            },
+            {
+                "id": "9NXQKPGMHH9G"
+            },
+            {
+                "id": "9NBLGGH43KZB"
+            },
+            {
+                "id": "9N7P579VZC33"
+            },
+            {
+                "id": "9NC9TNXS9C8G"
+            },
+            {
+                "id": "9NQVDQS2BC10"
+            },
+            {
+                "id": "9N7GCF5SGCXC"
+            },
+            {
+                "id": "9NG7LG421V0Q"
+            },
+            {
+                "id": "9NX6XGVJ0J3D"
+            },
+            {
+                "id": "9MXPZ33Z9PWH"
+            },
+            {
+                "id": "9PDXF172R7VJ"
+            },
+            {
+                "id": "9PNNV537W2SN"
+            },
+            {
+                "id": "9NNG78K7N91K"
+            },
+            {
+                "id": "9MSMJH3C6TKR"
+            },
+            {
+                "id": "9PFS8Q01C2C4"
+            },
+            {
+                "id": "BWMQL2RPWBHB"
+            },
+            {
+                "id": "9P675WH90SB4"
+            },
+            {
+                "id": "9NWVC7XP3PFD"
+            },
+            {
+                "id": "9N8WVMD7J5GQ"
+            },
+            {
+                "id": "9P59LFQSNB6R"
+            },
+            {
+                "id": "9N2H2GRB4D0K"
+            },
+            {
+                "id": "9NX9WH5F0RZD"
+            },
+            {
+                "id": "C2X6ZCNKN2WR"
+            },
+            {
+                "id": "9PL1J8PJKH29"
+            },
+            {
+                "id": "9NXR6469DM2P"
+            },
+            {
+                "id": "9PHJZZHT860R"
+            },
+            {
+                "id": "9N38MH44JD8P"
+            },
+            {
+                "id": "9PD1Z95CNTW4"
+            },
+            {
+                "id": "9N7GG222GTTH"
+            },
+            {
+                "id": "9NLW8WFH4RQT"
+            },
+            {
+                "id": "9NX9LJ5JSWH8"
+            },
+            {
+                "id": "9MZ55WCBW7TK"
+            },
+            {
+                "id": "9PKXZHKXNH8C"
+            },
+            {
+                "id": "9NJ5X04M30HN"
+            },
+            {
+                "id": "9NKK6CX54183"
+            },
+            {
+                "id": "9NMS4SFNBGBH"
+            },
+            {
+                "id": "9NKVX66J0ZSK"
+            },
+            {
+                "id": "9NHFVWX1V7QJ"
+            },
+            {
+                "id": "C37XBX7DCBZ0"
+            },
+            {
+                "id": "9P1ZX74WPL68"
+            },
+            {
+                "id": "9N7L81J5XW7T"
+            },
+            {
+                "id": "9PJGM0T0827V"
+            },
+            {
+                "id": "9PFJDSL1CC7G"
+            },
+            {
+                "id": "9MW4RJDRSF78"
+            },
+            {
+                "id": "9P1N07XDL1D4"
+            },
+            {
+                "id": "9MVF0PGV94F7"
+            },
+            {
+                "id": "9N6Z8DQXSQWH"
+            },
+            {
+                "id": "9NBHQSQ3621M"
+            },
+            {
+                "id": "C0XBNVR137DZ"
+            },
+            {
+                "id": "9N6V2181GHLM"
+            },
+            {
+                "id": "9PLZPHBNHTMF"
+            },
+            {
+                "id": "9NSL68D814GC"
+            },
+            {
+                "id": "9MXND4PQLK3W"
+            },
+            {
+                "id": "9PK09BL31FK1"
+            },
+            {
+                "id": "9PLT62LRF9V7"
+            },
+            {
+                "id": "9NJPT63K27W8"
+            },
+            {
+                "id": "9PFD00CZJ35V"
+            },
+            {
+                "id": "9PBDC0XZ8TXK"
+            },
+            {
+                "id": "9PGNGGWBX1NR"
+            },
+            {
+                "id": "9PLCR0FR564K"
+            },
+            {
+                "id": "9PPSH9GQKLCB"
+            },
+            {
+                "id": "9NB65S6LFZRT"
+            },
+            {
+                "id": "9PHQJWGLTZM8"
+            },
+            {
+                "id": "9NL9VGSH00LL"
+            },
+            {
+                "id": "9N42CT1J5WGW"
+            },
+            {
+                "id": "9P1JS86M9SXH"
+            },
+            {
+                "id": "9NBZ9JF6TFMD"
+            },
+            {
+                "id": "9P71MB9QCF77"
+            },
+            {
+                "id": "9NKGNMNK3K3Z"
+            },
+            {
+                "id": "9NDV7FRVD7ML"
+            },
+            {
+                "id": "9MZR11JRF7BX"
+            },
+            {
+                "id": "9NC34KWSN4HW"
+            },
+            {
+                "id": "9PN0W216SKZB"
+            },
+            {
+                "id": "9P35DPLN1JCN"
+            },
+            {
+                "id": "9NDNP3J6XWVH"
+            },
+            {
+                "id": "9NM6NG7KNHWJ"
+            },
+            {
+                "id": "9N5253J559LR"
+            },
+            {
+                "id": "9NBR2ZSD99FX"
+            },
+            {
+                "id": "9P6N7LQ4HZFD"
+            },
+            {
+                "id": "9PLDLMPLR7JV"
+            },
+            {
+                "id": "9PJ2DSSXZR0P"
+            },
+            {
+                "id": "9PPMVK9HRHWC"
+            },
+            {
+                "id": "9P3S3C0WHGM9"
+            },
+            {
+                "id": "9P5SFDNW6V13"
+            },
+            {
+                "id": "9PNJXVCVWD4K"
+            },
+            {
+                "id": "9N3NK5WW05HT"
+            },
+            {
+                "id": "9NS0KH25D76X"
+            },
+            {
+                "id": "9P3ZRGNQVC7D"
+            },
+            {
+                "id": "BPQZT43FWD49"
+            },
+            {
+                "id": "C2KDNLT2H7DM"
+            },
+            {
+                "id": "9P4KMR76PLLQ"
+            },
+            {
+                "id": "9NBLGGH4PBBM"
+            },
+            {
+                "id": "9NBLGGH3SHM5"
+            },
+            {
+                "id": "9NN3HCKW5TPC"
+            },
+            {
+                "id": "9MWGGC7JH35B"
+            },
+            {
+                "id": "9PJR5XZG5CNS"
+            },
+            {
+                "id": "9MXWKHJ3VZZH"
+            },
+            {
+                "id": "9NX3G3Z38CV2"
+            },
+            {
+                "id": "9MVK5W0HMRP7"
+            },
+            {
+                "id": "9P44W70MC99Z"
+            },
+            {
+                "id": "9PB79JST8PDH"
+            },
+            {
+                "id": "9PC288TN7R8K"
+            },
+            {
+                "id": "9PJTHRNVH62H"
+            },
+            {
+                "id": "9NVK1W7L093S"
+            },
+            {
+                "id": "9P5739G419LD"
+            },
+            {
+                "id": "9PGL2Z1H9M4R"
+            },
+            {
+                "id": "9P6VZCRGXFMX"
+            },
+            {
+                "id": "9P8CFXZH93CK"
+            },
+            {
+                "id": "9NBLGGH5WMKM"
+            },
+            {
+                "id": "9NBLGGH515BD"
+            },
+            {
+                "id": "9NBLGGH5WLR0"
+            },
+            {
+                "id": "9NWQMVSB63N4"
+            },
+            {
+                "id": "9N9WZT3PJ27W"
+            },
+            {
+                "id": "9WZDNCRFHWFH"
+            },
+            {
+                "id": "9WZDNCRFJBFJ"
+            },
+            {
+                "id": "9NTM9HXNLSZX"
+            },
+            {
+                "id": "9NZL91Q08XRV"
+            },
+            {
+                "id": "9NF6WPNS1S73"
+            },
+            {
+                "id": "9P8JHRDVBLHB"
+            },
+            {
+                "id": "9NCLP4LV5K7Z"
+            },
+            {
+                "id": "9NDDH3R9DF40"
+            },
+            {
+                "id": "9PKM22F7C9K5"
+            },
+            {
+                "id": "BSMZH25V6V46"
+            },
+            {
+                "id": "9PM3NVB3PXG0"
+            },
+            {
+                "id": "9N2X1J99S4M9"
+            },
+            {
+                "id": "9P2XMXXFQV5G"
+            },
+            {
+                "id": "9PHT4W7WBBDQ"
+            },
+            {
+                "id": "9NPHVDB4XFJP"
+            },
+            {
+                "id": "9P9MC8B7R5FP"
+            },
+            {
+                "id": "9N8X6BC9P0CX"
+            },
+            {
+                "id": "9P6CVNVMK56R"
+            },
+            {
+                "id": "9P8HN2T2SZGB"
+            },
+            {
+                "id": "9NBLGGH51BMC"
+            },
+            {
+                "id": "9P64KV1HQK07"
+            },
+            {
+                "id": "9NC6BX5R7JKC"
+            },
+            {
+                "id": "9NHPR05080C6"
+            },
+            {
+                "id": "9PNG83MDD6SH"
+            },
+            {
+                "id": "9MV6MCVLT8GR"
+            },
+            {
+                "id": "BNVQ3TXZ3JH4"
+            },
+            {
+                "id": "9P5B81KVDGP1"
+            },
+            {
+                "id": "9PB86W3JK8Z5"
+            },
+            {
+                "id": "9PDDP6ML6XHF"
+            },
+            {
+                "id": "9NXN8GF8N9HT"
+            },
+            {
+                "id": "9PDV8FKWP3B4"
+            },
+            {
+                "id": "9P8MK4NC0LJB"
+            },
+            {
+                "id": "9PBWWQGXVMKC"
+            },
+            {
+                "id": "9NP4BGBLLLXM"
+            },
+            {
+                "id": "9P8XJRLCLH2P"
+            },
+            {
+                "id": "9PKD7RG0TQP4"
+            },
+            {
+                "id": "9N88HSBP6RJ8"
+            },
+            {
+                "id": "9PFZC53PVTDB"
+            },
+            {
+                "id": "9NBLSN1JP7TH"
+            },
+            {
+                "id": "9NT3FGQC1DFR"
+            },
+            {
+                "id": "9PLWSGHFQ4PS"
+            },
+            {
+                "id": "9NNSTP6KJTZ9"
+            },
+            {
+                "id": "9MZN3SMXN824"
+            },
+            {
+                "id": "9PM2P9HQD1ML"
+            },
+            {
+                "id": "9MV13BTTCKLL"
+            },
+            {
+                "id": "BQVQTL3PCH05"
+            },
+            {
+                "id": "9P01NRSZCVR6"
+            },
+            {
+                "id": "9N9606CC950J"
+            },
+            {
+                "id": "9PJ6C03ZLLQV"
+            },
+            {
+                "id": "9NBLGGH1Z6FB"
+            },
+            {
+                "id": "9N8CD0XZKLP4"
+            },
+            {
+                "id": "9N633BP2KCKD"
+            },
+            {
+                "id": "9PGB72NFG5JN"
+            },
+            {
+                "id": "9P8Q4W21QQZ2"
+            },
+            {
+                "id": "9MW5141C2PRX"
+            },
+            {
+                "id": "9P1P5Q3BNM7J"
+            },
+            {
+                "id": "9P6X271HLG8Q"
+            },
+            {
+                "id": "9N8QNKN5ZKTH"
+            },
+            {
+                "id": "9N8N7NZSVTG3"
+            },
+            {
+                "id": "9P5LZC1KB48V"
+            },
+            {
+                "id": "9P5VMG8D4P4B"
+            },
+            {
+                "id": "9PBC1QFBW563"
+            },
+            {
+                "id": "9P5S2J2VLLPR"
+            },
+            {
+                "id": "9MZRSLLWKWDV"
+            },
+            {
+                "id": "9NQ73XB1Q5ZG"
+            },
+            {
+                "id": "9P3SX4G50LZ1"
+            },
+            {
+                "id": "9NCT87FKQ4GM"
+            },
+            {
+                "id": "9P2J7WHV0K4N"
+            },
+            {
+                "id": "9NS66QNVR00N"
+            },
+            {
+                "id": "9NH2J7X3MPB0"
+            },
+            {
+                "id": "9NBLGGH1Z6FQ"
+            },
+            {
+                "id": "9PBHXGWZTS2N"
+            },
+            {
+                "id": "9NBLGGH4SPK6"
+            },
+            {
+                "id": "9NS84HCWZD8B"
+            },
+            {
+                "id": "9PGNT102001S"
+            },
+            {
+                "id": "9P3PL76N0KWZ"
+            },
+            {
+                "id": "9NXPV1T3WS34"
+            },
+            {
+                "id": "9P2N57MC619K"
+            },
+            {
+                "id": "9P9JZLNFQ9PT"
+            },
+            {
+                "id": "9P7GBPGT90L3"
+            },
+            {
+                "id": "9P6SFBR1TCWQ"
+            },
+            {
+                "id": "9MZQR8317S3B"
+            },
+            {
+                "id": "C2NC88M7NWZ1"
+            },
+            {
+                "id": "9NP6WL1XQDBW"
+            },
+            {
+                "id": "9N1KQPLTR7S5"
+            },
+            {
+                "id": "9PC58LJXK3RM"
+            },
+            {
+                "id": "9NG5L58FD3X5"
+            },
+            {
+                "id": "9PK5S1QKV10D"
+            },
+            {
+                "id": "9MTSBWPWPQVQ"
+            },
+            {
+                "id": "9N0B7G9BHRK4"
+            },
+            {
+                "id": "9NT4X7P8B9NB"
+            },
+            {
+                "id": "9NXQPGMR917R"
+            },
+            {
+                "id": "9PMDDQ228FQD"
+            },
+            {
+                "id": "9N7H54KNCB9N"
+            },
+            {
+                "id": "9NKRBSZXQ2HM"
+            },
+            {
+                "id": "BX3S1Q5DVHRD"
+            },
+            {
+                "id": "9NNLBL0T2Z43"
+            },
+            {
+                "id": "9PLMGFWCFZ9G"
+            },
+            {
+                "id": "9NRH78B682L8"
+            },
+            {
+                "id": "9P75CZFXMS7N"
+            },
+            {
+                "id": "9N5QWL08HRTR"
+            },
+            {
+                "id": "9NF83PRZK6K3"
+            },
+            {
+                "id": "9PPBVK3TK83M"
+            },
+            {
+                "id": "C27QL5JBKQ8M"
+            },
+            {
+                "id": "9PN3VDFTB5HZ"
+            },
+            {
+                "id": "C2B4T86TXLRS"
+            },
+            {
+                "id": "9MVN4ND41DD3"
+            },
+            {
+                "id": "9P7NH82HZCDF"
+            },
+            {
+                "id": "9NPWSCWJGHL1"
+            },
+            {
+                "id": "9N3TF0CG8NZB"
+            },
+            {
+                "id": "9PP7XSG5LDH1"
+            },
+            {
+                "id": "9P2J5D12GJL5"
+            },
+            {
+                "id": "9P03JGQ4S1GC"
+            },
+            {
+                "id": "9MX8R81JW1B5"
+            },
+            {
+                "id": "9NT0NT8JQMQN"
+            },
+            {
+                "id": "9N8J0T5HCDB9"
+            },
+            {
+                "id": "9P4Z4TW66LPV"
+            },
+            {
+                "id": "9NFKN56ZBMR0"
+            },
+            {
+                "id": "9NFSR96G6K4N"
+            },
+            {
+                "id": "9MWD2Z8L1FBQ"
+            },
+            {
+                "id": "9NLDM4DGX41G"
+            },
+            {
+                "id": "9NF2DDV5RTH8"
+            },
+            {
+                "id": "9NR8ZBSJQ4FD"
+            },
+            {
+                "id": "9NBTL551XL5N"
+            },
+            {
+                "id": "9N944BP7SMCG"
+            },
+            {
+                "id": "9NC0071DJ6XC"
+            },
+            {
+                "id": "9PC4RWP34M2D"
+            },
+            {
+                "id": "9NBLGJQQBHH4"
+            },
+            {
+                "id": "9NSFGM8J6MBJ"
+            },
+            {
+                "id": "9PMT49X8ZGM2"
+            },
+            {
+                "id": "9N2VDJVMFKQ9"
+            },
+            {
+                "id": "9N08S5VPC4SX"
+            },
+            {
+                "id": "9N046HWGQ4J2"
+            },
+            {
+                "id": "9P3SS6K8ZQ57"
+            },
+            {
+                "id": "9MVJ0W5N2L2Q"
+            },
+            {
+                "id": "9P9C1HB78K05"
+            },
+            {
+                "id": "C521HDXRTS7F"
+            },
+            {
+                "id": "9NLT5XR52ZS7"
+            },
+            {
+                "id": "9NGH1FK0RJGL"
+            },
+            {
+                "id": "9NBLGGH5342P"
+            },
+            {
+                "id": "BSLGLG8P9T01"
+            },
+            {
+                "id": "9NCHVR5KH0RN"
+            },
+            {
+                "id": "9NDBKK9G0FHL"
+            },
+            {
+                "id": "9P75CBJ9WT9W"
+            },
+            {
+                "id": "9PBB4QHMSDKR"
+            },
+            {
+                "id": "9PHFTS44F99K"
+            },
+            {
+                "id": "9N015DFDMVK6"
+            },
+            {
+                "id": "9PCPD8CGKR4L"
+            },
+            {
+                "id": "9NVRZZJ4NG99"
+            },
+            {
+                "id": "9NG06CSMM97P"
+            },
+            {
+                "id": "9PNBGZTL0Z1S"
+            },
+            {
+                "id": "9PD0BJRBLRJM"
+            },
+            {
+                "id": "9NC4QMRHCNZK"
+            },
+            {
+                "id": "9NWZTB9JQG9S"
+            },
+            {
+                "id": "9MVX1V7W5SW8"
+            },
+            {
+                "id": "9N9WWM5JXCBZ"
+            },
+            {
+                "id": "9MZNFNN3XJ3F"
+            },
+            {
+                "id": "9P40SC5DQ9K0"
+            },
+            {
+                "id": "9NXCSWCQTNFG"
+            },
+            {
+                "id": "9NX14Q0QZD1T"
+            },
+            {
+                "id": "9P3XR9QN0P4C"
+            },
+            {
+                "id": "9NB1LCQDPPM1"
+            },
+            {
+                "id": "9PLSCHRN5715"
+            },
+            {
+                "id": "9PJ06TZX4NMH"
+            }
+        ],
+        "rawHeaders": [
+            "Content-Length",
+            "6573",
+            "Content-Type",
+            "application/json",
+            "Content-MD5",
+            "Ik3KMJv+H11VZ7iOvt63sg==",
+            "Last-Modified",
+            "Thu, 05 Aug 2021 13:18:25 GMT",
+            "Accept-Ranges",
+            "bytes",
+            "ETag",
+            "\"0x8D9581381F6FEB5\"",
+            "Server",
+            "Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0",
+            "x-ms-request-id",
+            "7a731ddc-401e-00e7-4bfc-89ff2f000000",
+            "x-ms-version",
+            "2019-02-02",
+            "x-ms-meta-CustomMD5Checksum",
+            "224dca309bfe1f5d5567b88ebedeb7b2",
+            "x-ms-creation-time",
+            "Sat, 16 May 2020 08:54:52 GMT",
+            "x-ms-lease-status",
+            "unlocked",
+            "x-ms-lease-state",
+            "available",
+            "x-ms-blob-type",
+            "BlockBlob",
+            "x-ms-server-encrypted",
+            "true",
+            "Cache-Control",
+            "max-age=121",
+            "Expires",
+            "Sat, 07 Aug 2021 04:23:57 GMT",
+            "Date",
+            "Sat, 07 Aug 2021 04:21:56 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    }
+]

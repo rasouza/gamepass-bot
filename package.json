@@ -4,14 +4,17 @@
   "main": "bot.js",
   "author": "R. A. Souza",
   "license": "MIT",
-  "type": "module",
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .ts",
+    "test": "jest",
+    "build": "tsc",
     "start": "node dist/bin/bot.js",
     "sync": "node dist/bin/sync.js",
-    "console": "node -r dotenv/config dist/bin/console.js",
-    "build": "tsc",
+    "console": "nodemon -x ts-node bin/console.ts",
+    "watch-bot": "nodemon -x ts-node bin/bot.ts",
+    "watch-sync": "nodemon -x ts-node dist/bin/sync.js --dry-run",
+    "watch": "concurrently -k -c \"cyan.bold\" \"npm:watch-*\"",
     "get-version": "echo $npm_package_version",
     "postversion": "git add package.json && git commit -m \"[skip ci] bump package.json version up\" && git push origin master"
   },
@@ -25,30 +28,46 @@
     "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
+    "module-alias": "^2.2.2",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.24",
     "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
+    "concurrently": "^6.2.0",
     "cz-conventional-changelog": "3.3.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier-standard": "^4.0.1",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "^27.0.6",
+    "nock": "^13.1.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "prettier-config-standard": "^4.0.0",
     "semantic-release": "^17.4.4",
     "standard": "^16.0.3",
+    "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0",
-    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/rasouza/gamepass-bot.git"
+  },
+  "_moduleAliases": {
+    "@": "dist/src"
   },
   "release": {
     "plugins": [

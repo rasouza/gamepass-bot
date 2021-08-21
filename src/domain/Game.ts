@@ -1,5 +1,3 @@
-import { GameModel } from '../interfaces/index.js'
-
 export default class Game {
   id: string
   title: string
@@ -10,7 +8,7 @@ export default class Game {
   description: string
   last_sync: Date // eslint-disable-line camelcase
 
-  constructor (game: GameModel) {
+  constructor(game) {
     this.id = game.id
     this.title = game.title
     this.developer = game.developer

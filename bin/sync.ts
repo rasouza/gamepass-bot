@@ -1,21 +1,24 @@
+import 'module-alias/register'
 
 import { Set } from 'immutable'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
-import Logger from '../src/config/logger.js'
-import { startTransaction } from '../src/config/sentry.js'
-import { getIdCatalog, searchGames } from '../src/services/xbox.js'
-import GameDB from '../src/models/game.js'
+import Logger from '@/config/logger'
+import { startTransaction } from '@/config/sentry'
+import { getIdCatalog, searchGames } from '@/services/xbox'
+import GameDB from '@/models/game'
 
 const gameDB = new GameDB()
 
-const argv = yargs(hideBin(process.argv)).options({
-  dryRun: { type: 'boolean' }
-}).parseSync()
+const argv = yargs(hideBin(process.argv))
+  .options({
+    dryRun: { type: 'boolean' }
+  })
+  .parseSync()
 if (argv.dryRun) Logger.info('running on dry run mode')
 
-async function sync () {
+async function sync() {
   Logger.info('Sync started! Checking new games...')
   const transaction = startTransaction('XBox Sync')
 
@@ -28,14 +31,14 @@ async function sync () {
   if (insertDiff.size > 0) {
     const newGames = await searchGames(insertDiff.toArray())
     if (!argv.dryRun) gameDB.insert(newGames)
-    Logger.info('New games inserted', { newGames })
+    Logger.debug('New games inserted', { newGames })
   }
 
   if (cleanupDiff.size > 0) {
-    cleanupDiff.forEach(async id => {
+    cleanupDiff.forEach(async (id) => {
       if (!argv.dryRun) {
         const game = await gameDB.delete(id)
-        Logger.info(`${game?.title} is being deleted`, { game })
+        Logger.debug(`${game?.title} is being deleted`, { game })
       }
     })
   }

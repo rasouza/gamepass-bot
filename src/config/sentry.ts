@@ -14,13 +14,13 @@ Sentry.init({
   tracesSampleRate: 1.0
 })
 
-export function startTransaction (name: string) {
+export function startTransaction(name: string) {
   const transaction = Sentry.startTransaction({
     op: 'transaction',
     name
   })
 
-  Sentry.configureScope(scope => {
+  Sentry.configureScope((scope) => {
     scope.setSpan(transaction)
   })
 
