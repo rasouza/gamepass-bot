@@ -10,7 +10,7 @@ interface PK {
   id: string | number
 }
 
-export abstract class DB<Model extends PK, Domain> {
+export abstract class DB<Model extends PK> {
   abstract name: string
   client = client
 
@@ -42,7 +42,7 @@ export abstract class DB<Model extends PK, Domain> {
     return data
   }
 
-  async insert(domain: Domain | Domain[]): Promise<Model | Model[] | null> {
+  async insert(domain: Model | Model[]): Promise<Model | Model[] | null> {
     const { data, error } = await this.getTable().insert(domain)
 
     if (error) Logger.error(error)

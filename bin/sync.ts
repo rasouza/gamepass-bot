@@ -11,12 +11,14 @@ import GameDB from '@/models/game'
 
 const gameDB = new GameDB()
 
-const argv = yargs(hideBin(process.argv)).options({
-  dryRun: { type: 'boolean' }
-}).parseSync()
+const argv = yargs(hideBin(process.argv))
+  .options({
+    dryRun: { type: 'boolean' }
+  })
+  .parseSync()
 if (argv.dryRun) Logger.info('running on dry run mode')
 
-async function sync () {
+async function sync() {
   Logger.info('Sync started! Checking new games...')
   const transaction = startTransaction('XBox Sync')
 
@@ -33,7 +35,7 @@ async function sync () {
   }
 
   if (cleanupDiff.size > 0) {
-    cleanupDiff.forEach(async id => {
+    cleanupDiff.forEach(async (id) => {
       if (!argv.dryRun) {
         const game = await gameDB.delete(id)
         Logger.debug(`${game?.title} is being deleted`, { game })

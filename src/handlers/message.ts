@@ -10,7 +10,7 @@ const commands: Collection<string, Command> = new Collection()
 commands.set(subscribe.name, subscribe)
 commands.set(unsubscribe.name, unsubscribe)
 
-export default function messageHandler (message: Message): void {
+export default function messageHandler(message: Message): void {
   if (!message.content.startsWith(prefix) || message.author.bot) return
 
   const args = message.content.slice(prefix.length).trim().split(/ +/)

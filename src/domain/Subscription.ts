@@ -1,11 +1,9 @@
-import { SubscriptionModel } from '@/interfaces'
-
 export default class Subscription {
   id: string
   channel: string
   guild: string
 
-  constructor (subscription: SubscriptionModel) {
+  constructor(subscription) {
     this.id = subscription.id
     this.channel = subscription.channel
     this.guild = subscription.guild

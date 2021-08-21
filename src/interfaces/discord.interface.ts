@@ -1,14 +1,14 @@
 import { Message } from 'discord.js'
 
 export interface Command {
-  name: string,
-  description: string,
+  name: string
+  description: string
   execute: (message: Message, args: string[]) => void
 }
 
 interface EmbedAuthor {
-  name?: string,
-  icon_url?: string, // eslint-disable-line camelcase
+  name?: string
+  icon_url?: string // eslint-disable-line camelcase
   url?: string
 }
 
@@ -17,24 +17,24 @@ interface EmbedImage {
 }
 
 interface EmbedField {
-  name: string,
+  name: string
   value: string
 }
 
 interface EmbedFooter {
-  text?: string,
+  text?: string
   icon_url?: string // eslint-disable-line camelcase
 }
 
 export interface Embed {
-  color?: string,
-  title?: string,
-  url?: string,
-  author?: EmbedAuthor,
-  description?: string,
-  thumbnail?: EmbedImage,
-  fields?: EmbedField[],
-  image?: EmbedImage,
-  timestamp?: Date,
+  color?: string
+  title?: string
+  url?: string
+  author?: EmbedAuthor
+  description?: string
+  thumbnail?: EmbedImage
+  fields?: EmbedField[]
+  image?: EmbedImage
+  timestamp?: Date
   footer?: EmbedFooter
 }
