@@ -67,7 +67,7 @@
     "url": "https://github.com/rasouza/gamepass-bot.git"
   },
   "_moduleAliases": {
-    "@": "dist/src"
+    "@": "src"
   },
   "release": {
     "plugins": [
