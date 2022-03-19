@@ -29,6 +29,7 @@
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
     "module-alias": "^2.2.2",
+    "node-cron": "^3.0.0",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0",
     "yargs": "^17.0.1"
