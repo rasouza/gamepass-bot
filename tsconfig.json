@@ -2,7 +2,10 @@
   "extends": "@tsconfig/recommended",
   "compilerOptions": {
     "noEmit": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true
   },
   "ts-node": {
     "require": [
