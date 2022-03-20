@@ -74,7 +74,7 @@ export async function getIdCatalog(): Promise<string[]> {
   const sigls: Sigls[] = (await client.get('/sigls/v2', { params })).data.slice(
     1
   )
-  Logger.debug(`Found ${sigls.length} games`)
+  Logger.debug(`[XBox Service] Found ${sigls.length} games`)
 
   return sigls.map((sigl) => sigl.id)
 }
