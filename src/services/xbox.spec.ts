@@ -8,7 +8,7 @@ nockBack.setMode('record')
 
 describe('services/xbox.ts', () => {
   describe('getIdCatalog()', () => {
-    let catalog
+    let catalog: string[]
     beforeEach(async () => {
       const { nockDone } = await nockBack('catalog.json')
       catalog = await getIdCatalog()
