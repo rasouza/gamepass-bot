@@ -10,5 +10,7 @@ module.exports = {
   testEnvironment: 'node',
   roots: ['src'],
   modulePaths: ['<rootDir>/src'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */)
+  moduleNameMapper: pathsToModuleNameMapper(
+    compilerOptions.paths /*, { prefix: '<rootDir>/' } */
+  )
 }

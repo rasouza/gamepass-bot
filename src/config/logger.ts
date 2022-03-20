@@ -1,12 +1,16 @@
 import winston from 'winston'
 
 const { createLogger, format, transports } = winston
-const { combine, timestamp, json, metadata } = format
+const { combine, timestamp, json, metadata, cli } = format
 const { Console } = transports
 
 const logs: winston.transport[] = []
-
-logs.push(new Console())
+const consoleFormat = combine(timestamp(), cli())
+logs.push(
+  new Console({
+    format: consoleFormat
+  })
+)
 
 // Note: Order matters!
 const defaultFormat = combine(metadata(), timestamp(), json())
