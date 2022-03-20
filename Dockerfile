@@ -11,4 +11,4 @@ COPY dist/ .
 COPY package.json .
 
 RUN npm i --production --force
-CMD ["pm2-runtime", "bin/bot.js"]
+CMD ["pm2-runtime", "bot.js"]
