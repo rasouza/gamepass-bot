@@ -20,6 +20,7 @@
     "postversion": "git add package.json && git commit -m \"[skip ci] bump package.json version up\" && git push origin master"
   },
   "dependencies": {
+    "@babel/runtime": "^7.17.8",
     "@sentry/node": "^6.8.0",
     "@sentry/tracing": "^6.8.0",
     "@supabase/supabase-js": "^1.18.1",

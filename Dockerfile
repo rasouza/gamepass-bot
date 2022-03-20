@@ -10,5 +10,5 @@ RUN npm install pm2 -g
 COPY dist/ .
 COPY package.json .
 
-RUN npm i --production --force
+RUN yarn --production --force
 CMD ["pm2-runtime", "bot.js"]
