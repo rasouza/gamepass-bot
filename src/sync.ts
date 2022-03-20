@@ -18,8 +18,26 @@ const argv = yargs(hideBin(process.argv))
   .parseSync()
 if (argv.dryRun) Logger.info('running on dry run mode')
 
+async function add(gameIds: string[]): Promise<number> {
+  if (gameIds.length === 0) return 0
+
+  const newGames = await searchGames(gameIds)
+  gameDB.insert(newGames)
+
+  return gameIds.length
+}
+
+async function clean(gameIds: string[]): Promise<number> {
+  if (gameIds.length === 0) return 0
+
+  const games = gameIds.map(async (id) => await gameDB.delete(id))
+  Logger.debug({ message: 'Some games were deleted from the catalog', games })
+
+  return gameIds.length
+}
+
 async function sync() {
-  Logger.info('Sync started! Checking new games...')
+  Logger.info('Sync started!')
   const transaction = startTransaction('XBox Sync')
 
   const XboxCatalog = Set(await getIdCatalog())
@@ -28,22 +46,18 @@ async function sync() {
   const insertDiff = XboxCatalog.subtract(games)
   const cleanupDiff = games.subtract(XboxCatalog)
 
-  if (insertDiff.size > 0) {
-    const newGames = await searchGames(insertDiff.toArray())
-    if (!argv.dryRun) gameDB.insert(newGames)
-    Logger.debug('New games inserted', { newGames })
-  }
+  if (!argv.dryRun) {
+    add(insertDiff.toArray()).then((num) =>
+      Logger.debug(`${num} games were added`)
+    )
 
-  if (cleanupDiff.size > 0) {
-    cleanupDiff.forEach(async (id) => {
-      if (!argv.dryRun) {
-        const game = await gameDB.delete(id)
-        Logger.debug(`${game?.title} is being deleted`, { game })
-      }
-    })
+    clean(cleanupDiff.toArray()).then((num) =>
+      Logger.debug(`${num} games were removed`)
+    )
   }
 
   transaction.finish()
+  Logger.info('Sync finished!')
 }
 
 cron.schedule(CRON, sync)
