@@ -1,6 +1,6 @@
-import Logger from '@/config/logger'
+import Logger from 'config/logger'
 
-import Game from '@/domain/Game'
+import Game from 'domain/Game'
 import { DB } from './base'
 
 export default class GameDB extends DB<Game> {

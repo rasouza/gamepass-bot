@@ -1,9 +1,9 @@
 import { Collection, Message } from 'discord.js'
-import { Command } from '@/interfaces'
-import Settings from '@/config/settings'
+import { Command } from 'interfaces'
+import Settings from 'config/settings'
 
-import subscribe from '@/commands/subscribe'
-import unsubscribe from '@/commands/unsubscribe'
+import subscribe from 'commands/subscribe'
+import unsubscribe from 'commands/unsubscribe'
 
 const { prefix } = Settings
 const commands: Collection<string, Command> = new Collection()

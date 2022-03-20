@@ -1,6 +1,6 @@
 import { Message, TextChannel } from 'discord.js'
-import SubscriptionDB from '@/models/subscription'
-import Settings from '@/config/settings'
+import SubscriptionDB from 'models/subscription'
+import Settings from 'config/settings'
 
 const { username } = Settings
 
