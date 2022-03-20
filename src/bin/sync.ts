@@ -1,15 +1,14 @@
-import 'module-alias/register'
-
 import { Set } from 'immutable'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import cron from 'node-cron'
 
-import Logger from '@/config/logger'
-import { startTransaction } from '@/config/sentry'
-import { getIdCatalog, searchGames } from '@/services/xbox'
-import GameDB from '@/models/game'
+import Logger from 'config/logger'
+import { startTransaction } from 'config/sentry'
+import { getIdCatalog, searchGames } from 'services/xbox'
+import GameDB from 'models/game'
 
+const CRON = process.env.CRON || '0 */1 * * * *'
 const gameDB = new GameDB()
 
 const argv = yargs(hideBin(process.argv))
@@ -47,4 +46,4 @@ async function sync() {
   transaction.finish()
 }
 
-cron.schedule(process.env.CRON, sync)
+cron.schedule(CRON, sync)

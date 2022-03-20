@@ -2,16 +2,16 @@ import 'module-alias/register'
 import repl from 'repl'
 import * as immutable from 'immutable'
 
-import * as xbox from '@/services/xbox'
+import * as xbox from 'services/xbox'
 
-import GameDB from '@/models/game'
-import SubscriptionDB from '@/models/subscription'
+import GameDB from 'models/game'
+import SubscriptionDB from 'models/subscription'
 
-import Game from '@/domain/Game'
-import Subscription from '@/domain/Subscription'
+import Game from 'domain/Game'
+import Subscription from 'domain/Subscription'
 
-import { client as discord } from '@/services/discord'
-import { client as supabase } from '@/models/base'
+import { client as discord } from 'services/discord'
+import { client as supabase } from 'models/base'
 
 const server = repl.start()
 

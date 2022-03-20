@@ -1,20 +1,8 @@
 {
+  "extends": "@tsconfig/recommended",
   "compilerOptions": {
-    "target": "es6",                          
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "./dist",
-
-    "strict": true,
-    "noImplicitAny": false,
-
+    
     "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"]
-    },
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
   },
   "ts-node": {
     "require": [

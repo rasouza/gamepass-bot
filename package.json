@@ -11,10 +11,10 @@
     "build": "tsc",
     "start": "node dist/bin/bot.js",
     "sync": "node dist/bin/sync.js",
-    "console": "nodemon -x ts-node bin/console.ts",
-    "watch-bot": "nodemon -x ts-node bin/bot.ts",
-    "watch-sync": "nodemon -x ts-node dist/bin/sync.js --dry-run",
-    "watch": "concurrently -k -c \"cyan.bold\" \"npm:watch-*\"",
+    "console": "nodemon -x ts-node src/bin/console.ts",
+    "watch:bot": "nodemon -x ts-node src/bin/bot.ts",
+    "watch:sync": "nodemon -x ts-node src/bin/sync.ts --dry-run",
+    "watch": "concurrently -k -c \"cyan.bold\" \"npm:watch:*\"",
     "get-version": "echo $npm_package_version",
     "postversion": "git add package.json && git commit -m \"[skip ci] bump package.json version up\" && git push origin master"
   },
@@ -28,14 +28,15 @@
     "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "logdna-winston": "^3.0.5",
-    "module-alias": "^2.2.2",
     "node-cron": "^3.0.0",
     "winston": "^3.3.3",
     "winston-dev-format": "^0.2.0",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^26.0.24",
+    "@types/node-cron": "^3.0.1",
     "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
@@ -66,9 +67,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rasouza/gamepass-bot.git"
-  },
-  "_moduleAliases": {
-    "@": "src"
   },
   "release": {
     "plugins": [
