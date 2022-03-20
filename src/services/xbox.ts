@@ -1,7 +1,7 @@
 import axios from 'axios'
-import Logger from '@/config/logger'
-import Game from '@/domain/Game'
-import { XboxGame } from '@/interfaces'
+import Logger from 'config/logger'
+import Game from 'domain/Game'
+import { XboxGame } from 'interfaces'
 
 const client = axios.create({
   baseURL: 'https://catalog.gamepass.com'
@@ -74,7 +74,7 @@ export async function getIdCatalog(): Promise<string[]> {
   const sigls: Sigls[] = (await client.get('/sigls/v2', { params })).data.slice(
     1
   )
-  Logger.debug(`Found ${sigls.length} games`)
+  Logger.debug(`[XBox Service] Found ${sigls.length} games`)
 
   return sigls.map((sigl) => sigl.id)
 }

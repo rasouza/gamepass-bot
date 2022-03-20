@@ -1,8 +1,8 @@
 import { Message, TextChannel } from 'discord.js'
-import Logger from '@/config/logger'
-import Settings from '@/config/settings'
-import SubscriptionDB from '@/models/subscription'
-import Subscription from '@/domain/Subscription'
+import Logger from 'config/logger'
+import Settings from 'config/settings'
+import SubscriptionDB from 'models/subscription'
+import Subscription from 'domain/Subscription'
 
 const { username, avatarURL } = Settings
 const db = new SubscriptionDB()

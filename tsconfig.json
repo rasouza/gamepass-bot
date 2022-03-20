@@ -1,20 +1,11 @@
 {
+  "extends": "@tsconfig/recommended",
   "compilerOptions": {
-    "target": "es6",                          
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "./dist",
-
-    "strict": true,
-    "noImplicitAny": false,
-
+    "noEmit": true,
     "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"]
-    },
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true
   },
   "ts-node": {
     "require": [

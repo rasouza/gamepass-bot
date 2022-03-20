@@ -3,7 +3,7 @@ export default class Subscription {
   channel: string
   guild: string
 
-  constructor(subscription) {
+  constructor(subscription: Subscription) {
     this.id = subscription.id
     this.channel = subscription.channel
     this.guild = subscription.guild
