@@ -1,0 +1,1257 @@
+{
+  "data": {
+    "Catalog": {
+      "searchStore": {
+        "elements": [
+          {
+            "title": "ARK: Survival Evolved",
+            "id": "16b7c8509ea8427898981145d244316c",
+            "namespace": "ark",
+            "description": "Stranded on the shores of a mysterious island, you must learn to survive. Use your cunning to kill or tame the primeval creatures roaming the land, and encounter other players to survive, dominate... and escape!",
+            "effectiveDate": "2020-06-11T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S1-2560x1440-c316afb7c33a9dfb892eef6b99169e43.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S1-2560x1440-c316afb7c33a9dfb892eef6b99169e43.jpg"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-usvfbmlqdt678vrp36qvm2d5cz2cpr",
+              "name": "Studio Wildcard"
+            },
+            "productSlug": "ark",
+            "urlSlug": "ark-survival-evolved",
+            "url": null,
+            "items": [
+              { "id": "84fb5b8e338d49d0aae5977eedf937b3", "namespace": "ark" }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "[]" },
+              { "key": "developerName", "value": "Studio Wildcard" },
+              { "key": "com.epicgames.app.productSlug", "value": "ark" }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "21122" },
+              { "id": "21129" },
+              { "id": "14346" },
+              { "id": "9547" },
+              { "id": "21138" },
+              { "id": "1299" },
+              { "id": "21139" },
+              { "id": "21140" },
+              { "id": "21141" },
+              { "id": "1367" },
+              { "id": "22775" },
+              { "id": "1080" },
+              { "id": "22776" },
+              { "id": "1370" },
+              { "id": "18778" },
+              { "id": "21146" },
+              { "id": "21147" },
+              { "id": "21148" },
+              { "id": "1117" },
+              { "id": "21149" }
+            ],
+            "catalogNs": {
+              "mappings": [{ "pageSlug": "ark", "pageType": "productHome" }]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 13900,
+                "voucherDiscount": 0,
+                "discount": 13900,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 139.00",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": [
+                    {
+                      "id": "c355bcd8072b46e893ac77d2963bce21",
+                      "endDate": "2022-09-29T15:00:00.000Z",
+                      "discountSetting": { "discountType": "PERCENTAGE" }
+                    }
+                  ]
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-09-22T15:00:00.000Z",
+                      "endDate": "2022-09-29T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Idle Champions of the Forgotten Realms",
+            "id": "a9748abde1c94b66aae5250bb9fc5503",
+            "namespace": "7e508f543b05465abe3a935960eb70ac",
+            "description": "Idle Champions is a licensed Dungeons & Dragons strategy management video game uniting iconic characters from novels, campaigns, and shows into one epic adventure.",
+            "effectiveDate": "2021-02-16T17:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S2_1200x1600-dd9a8f25ad56089231f43cf639bde217"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S1_2560x1440-e2a1ffd224f443594d5deff3a47a45e2"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S2_1200x1600-dd9a8f25ad56089231f43cf639bde217"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S2_1200x1600-dd9a8f25ad56089231f43cf639bde217"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S1_2560x1440-e2a1ffd224f443594d5deff3a47a45e2"
+              }
+            ],
+            "seller": {
+              "id": "o-3kpjwtwqwfl2p9wdwvpad7yqz4kt6c",
+              "name": "Codename Entertainment"
+            },
+            "productSlug": "idle-champions-of-the-forgotten-realms",
+            "urlSlug": "banegeneralaudience",
+            "url": null,
+            "items": [
+              {
+                "id": "9a4e1a1eb6b140f6a9e5e4dcb5a2bf55",
+                "namespace": "7e508f543b05465abe3a935960eb70ac"
+              }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "KR" },
+              { "key": "publisherName", "value": "Codename Entertainment" },
+              { "key": "developerName", "value": "Codename Entertainment" },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "idle-champions-of-the-forgotten-realms"
+              }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "games/edition/base" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "21136" },
+              { "id": "21122" },
+              { "id": "21138" },
+              { "id": "21139" },
+              { "id": "1188" },
+              { "id": "1141" },
+              { "id": "1370" },
+              { "id": "1115" },
+              { "id": "9547" },
+              { "id": "21149" },
+              { "id": "21119" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "idle-champions-of-the-forgotten-realms",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 0,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "0",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": {
+              "promotionalOffers": [],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Hundred Days - Winemaking Simulator",
+            "id": "141eee80fbe041d48e16e7b998829295",
+            "namespace": "4d8b727a49144090b103f6b6ba471e71",
+            "description": "Winemaking could be your best adventure. Make the best wine interacting with soil and nature and take your winery to the top. Your beautiful journey into the winemaking tradition starts now.",
+            "effectiveDate": "2021-05-13T14:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_G1C_00-1920x1080-0ffeb0645f0badb615627b481b4a913e.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S2-1200x1600-35531ec1fa868e3876fac76471a24017.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S2-1200x1600-35531ec1fa868e3876fac76471a24017.jpg"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S2-1200x1600-35531ec1fa868e3876fac76471a24017.jpg"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S1-2560x1440-8f0dd95b6027cd1243361d430b3bf552.jpg"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/4d8b727a49144090b103f6b6ba471e71/offer/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S2-1200x1600-35531ec1fa868e3876fac76471a24017.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-ty5rvlnsbgdnfffytsywat86gcedkm",
+              "name": "Broken Arms Games srls"
+            },
+            "productSlug": "hundred-days-winemaking-simulator",
+            "urlSlug": "hundred-days-winemaking-simulator",
+            "url": null,
+            "items": [
+              {
+                "id": "03cacb8754f243bfbc536c9dda0eb32e",
+                "namespace": "4d8b727a49144090b103f6b6ba471e71"
+              }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "[]" },
+              { "key": "developerName", "value": "Broken Arms Games" },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "hundred-days-winemaking-simulator"
+              }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "games/edition/base" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "1188" },
+              { "id": "21127" },
+              { "id": "19242" },
+              { "id": "21130" },
+              { "id": "16011" },
+              { "id": "9547" },
+              { "id": "1263" },
+              { "id": "15375" },
+              { "id": "18607" },
+              { "id": "1393" },
+              { "id": "21138" },
+              { "id": "16979" },
+              { "id": "21140" },
+              { "id": "17493" },
+              { "id": "21141" },
+              { "id": "18777" },
+              { "id": "1370" },
+              { "id": "18778" },
+              { "id": "21146" },
+              { "id": "1115" },
+              { "id": "21149" },
+              { "id": "10719" },
+              { "id": "21119" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "hundred-days-winemaking-simulator",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 16900,
+                "originalPrice": 16900,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 169.00",
+                  "discountPrice": "SEK 169.00",
+                  "intermediatePrice": "SEK 169.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "The Drone Racing League®",
+            "id": "1578c50f725742fab1863952e01efc52",
+            "namespace": "b6aa6a98bb394a53870bd6b026fefd1d",
+            "description": "DRL Simulator® is the premier first-person view (FPV) racing game and simulator.  DRL SIM® offers a robust, evolving feature set, including high-intensity drone racing. It packs tracks that DRL's real world pilots compete on, with more added every season.",
+            "effectiveDate": "2021-08-04T17:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S1_2560x1440-39456325d9a12441a58f5385b5719224"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S2_1200x1600-36e93298383163f825fc934da9003fb5"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S1_2560x1440-39456325d9a12441a58f5385b5719224"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S2_1200x1600-36e93298383163f825fc934da9003fb5"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S2_1200x1600-36e93298383163f825fc934da9003fb5"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S2_1200x1600-36e93298383163f825fc934da9003fb5"
+              }
+            ],
+            "seller": {
+              "id": "o-pxhj8tkrqv9mbs8c85dm6bwqanepy6",
+              "name": "Drone Racing League, Inc."
+            },
+            "productSlug": "the-drone-racing-league-simulator",
+            "urlSlug": "the-drone-racing-league-simulator",
+            "url": null,
+            "items": [
+              {
+                "id": "a7e0539500f74cee9c93b848083ab23a",
+                "namespace": "b6aa6a98bb394a53870bd6b026fefd1d"
+              }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "KR" },
+              { "key": "developerName", "value": "Drone Racing League, Inc." },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "the-drone-racing-league-simulator"
+              }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "games/edition/base" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "1393" },
+              { "id": "1203" },
+              { "id": "1299" },
+              { "id": "1370" },
+              { "id": "9547" },
+              { "id": "1212" },
+              { "id": "10719" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "the-drone-racing-league-simulator",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 7000,
+                "originalPrice": 7000,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 70.00",
+                  "discountPrice": "SEK 70.00",
+                  "intermediatePrice": "SEK 70.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": {
+              "promotionalOffers": [],
+              "upcomingPromotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-09-29T15:00:00.000Z",
+                      "endDate": "2022-10-06T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "Shadow of the Tomb Raider: Definitive Edition",
+            "id": "ee7f3c6725fd4fd4b8aeab8622cb770e",
+            "namespace": "4b5461ca8d1c488787b5200b420de066",
+            "description": "In Shadow of the Tomb Raider Definitive Edition experience the final chapter of Lara’s origin as she is forged into the Tomb Raider she is destined to be.",
+            "effectiveDate": "2021-12-30T16:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s1-2560x1440-eca6506e95a1_2560x1440-193582a5fd76a593804e0171d6395cf4"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s1-2560x1440-eca6506e95a1_2560x1440-193582a5fd76a593804e0171d6395cf4"
+              }
+            ],
+            "seller": {
+              "id": "o-7petn7mrlk8g86ktqm7uglcr7lfaja",
+              "name": "Square Enix"
+            },
+            "productSlug": "shadow-of-the-tomb-raider",
+            "urlSlug": "shadow-of-the-tomb-raider",
+            "url": null,
+            "items": [
+              {
+                "id": "e7f90759e0544e42be9391d10a5c6000",
+                "namespace": "4b5461ca8d1c488787b5200b420de066"
+              }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "[]" },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "shadow-of-the-tomb-raider"
+              }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "games/edition/base" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "1216" },
+              { "id": "21122" },
+              { "id": "1188" },
+              { "id": "21127" },
+              { "id": "9547" },
+              { "id": "9549" },
+              { "id": "21138" },
+              { "id": "21139" },
+              { "id": "21140" },
+              { "id": "21109" },
+              { "id": "21141" },
+              { "id": "22485" },
+              { "id": "1370" },
+              { "id": "21146" },
+              { "id": "1117" },
+              { "id": "21149" },
+              { "id": "21119" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "shadow-of-the-tomb-raider",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 35000,
+                "originalPrice": 35000,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 350.00",
+                  "discountPrice": "SEK 350.00",
+                  "intermediatePrice": "SEK 350.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Terraforming Mars",
+            "id": "f2496286331e405793d69807755b7b23",
+            "namespace": "25d726130e6c4fe68f88e71933bda955",
+            "description": "The taming of the Red Planet has begun!\n\nControl your corporation, play project cards, build up production, place your cities and green areas on the map, and race for milestones and awards!\n\nWill your corporation lead the way into humanity's new era?",
+            "effectiveDate": "2022-05-05T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/spt-assets/5199b206e46947ebad5e5c282e95776f/terraforming-mars-offer-1j70f.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/spt-assets/5199b206e46947ebad5e5c282e95776f/download-terraforming-mars-offer-13t2e.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/spt-assets/5199b206e46947ebad5e5c282e95776f/download-terraforming-mars-offer-13t2e.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-4x4bpaww55p5g3f6xpyqe2cneqxd5d",
+              "name": "Asmodee"
+            },
+            "productSlug": null,
+            "urlSlug": "24cdfcde68bf4a7e8b8618ac2c0c460b",
+            "url": null,
+            "items": [
+              {
+                "id": "ee49486d7346465dba1f1dec85725aee",
+                "namespace": "25d726130e6c4fe68f88e71933bda955"
+              }
+            ],
+            "customAttributes": [
+              { "key": "autoGeneratedPrice", "value": "false" },
+              { "key": "isManuallySetPCReleaseDate", "value": "true" }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games/edition/base" },
+              { "path": "games/edition" },
+              { "path": "games" }
+            ],
+            "tags": [
+              { "id": "1188" },
+              { "id": "21125" },
+              { "id": "1386" },
+              { "id": "9547" },
+              { "id": "21138" },
+              { "id": "1203" },
+              { "id": "1299" },
+              { "id": "21139" },
+              { "id": "21140" },
+              { "id": "21141" },
+              { "id": "1370" },
+              { "id": "1115" },
+              { "id": "21148" },
+              { "id": "21149" },
+              { "id": "10719" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "terraforming-mars-18c3ad",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [
+              {
+                "pageSlug": "terraforming-mars-18c3ad",
+                "pageType": "productHome"
+              }
+            ],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 13900,
+                "originalPrice": 13900,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 139.00",
+                  "discountPrice": "SEK 139.00",
+                  "intermediatePrice": "SEK 139.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Car Mechanic Simulator 2018",
+            "id": "5eb27cf1747c40b5a0d4f5492774678d",
+            "namespace": "226306adde104c9092247dcd4bfa1499",
+            "description": "Build and expand your repair service empire in this incredibly detailed and highly realistic simulation game, where attention to car detail is astonishing. Find classic, unique cars in the new Barn Find module and Junkyard module.",
+            "effectiveDate": "2022-06-23T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S2_1200x1600-f285924f9144353f57ac4631f0c689e6"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S1_2560x1440-3489ef1499e64c168fdf4b14926d2c23"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S2_1200x1600-f285924f9144353f57ac4631f0c689e6"
+              }
+            ],
+            "seller": {
+              "id": "o-5n5cbrasl5yzexjc529rypg8eh8lfb",
+              "name": "PlayWay"
+            },
+            "productSlug": "car-mechanic-simulator-2018",
+            "urlSlug": "car-mechanic-simulator-2018",
+            "url": null,
+            "items": [
+              {
+                "id": "49a3a8597c4240ecaf1f9068106c9869",
+                "namespace": "226306adde104c9092247dcd4bfa1499"
+              }
+            ],
+            "customAttributes": [
+              { "key": "com.epicgames.app.blacklist", "value": "[]" },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "car-mechanic-simulator-2018"
+              }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "games/edition" },
+              { "path": "games/edition/base" },
+              { "path": "applications" }
+            ],
+            "tags": [
+              { "id": "21120" },
+              { "id": "1188" },
+              { "id": "21127" },
+              { "id": "9547" },
+              { "id": "1393" },
+              { "id": "21138" },
+              { "id": "21139" },
+              { "id": "21140" },
+              { "id": "21141" },
+              { "id": "1370" },
+              { "id": "21146" },
+              { "id": "21148" },
+              { "id": "21149" },
+              { "id": "21119" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "car-mechanic-simulator-2018",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 13900,
+                "originalPrice": 13900,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 139.00",
+                  "discountPrice": "SEK 139.00",
+                  "intermediatePrice": "SEK 139.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "A Game Of Thrones: The Board Game Digital Edition",
+            "id": "a125d72a47a1490aba78c4e79a40395d",
+            "namespace": "1b737464d3c441f8956315433be02d3b",
+            "description": "It is the digital adaptation of the top-selling strategy board game from Fantasy Flight Games.",
+            "effectiveDate": "2022-06-23T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/spt-assets/61c1413e3db0423f9ddd4a5edbee717e/a-game-of-thrones-offer-11gxu.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/spt-assets/61c1413e3db0423f9ddd4a5edbee717e/download-a-game-of-thrones-offer-1q8ei.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/spt-assets/61c1413e3db0423f9ddd4a5edbee717e/download-a-game-of-thrones-offer-1q8ei.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-4x4bpaww55p5g3f6xpyqe2cneqxd5d",
+              "name": "Asmodee"
+            },
+            "productSlug": null,
+            "urlSlug": "ce6f7ab4edab4cc2aa7e0ff4c19540e2",
+            "url": null,
+            "items": [
+              {
+                "id": "dc6ae31efba7401fa72ed93f0bd37c6a",
+                "namespace": "1b737464d3c441f8956315433be02d3b"
+              }
+            ],
+            "customAttributes": [
+              { "key": "autoGeneratedPrice", "value": "false" },
+              { "key": "isManuallySetPCReleaseDate", "value": "true" }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games/edition/base" },
+              { "path": "games/edition" },
+              { "path": "games" }
+            ],
+            "tags": [
+              { "id": "21138" },
+              { "id": "1203" },
+              { "id": "1299" },
+              { "id": "21139" },
+              { "id": "21140" },
+              { "id": "21125" },
+              { "id": "21141" },
+              { "id": "1370" },
+              { "id": "1115" },
+              { "id": "9547" },
+              { "id": "21149" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "a-game-of-thrones-5858a3",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [
+              {
+                "pageSlug": "a-game-of-thrones-5858a3",
+                "pageType": "productHome"
+              }
+            ],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 13900,
+                "originalPrice": 13900,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 139.00",
+                  "discountPrice": "SEK 139.00",
+                  "intermediatePrice": "SEK 139.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Gloomhaven",
+            "id": "9232fdbc352445cc820a54bdc97ed2bb",
+            "namespace": "bc079f73f020432fac896d30c8e2c330",
+            "description": "Whether you are drawn to Gloomhaven by the call of adventure or by an avid desire for gold glimmering in the dark, your fate will surely be the same. Gloomhaven, the digital adaptation of the acclaimed board game, mixes Tactical-RPG and dungeon-crawling.",
+            "effectiveDate": "2022-09-22T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/spt-assets/ef2777467a3c49059a076e42fd9b41f0/gloomhaven-offer-1j9mc.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/spt-assets/ef2777467a3c49059a076e42fd9b41f0/download-gloomhaven-offer-1ho2x.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/spt-assets/ef2777467a3c49059a076e42fd9b41f0/download-gloomhaven-offer-1ho2x.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-4x4bpaww55p5g3f6xpyqe2cneqxd5d",
+              "name": "Asmodee"
+            },
+            "productSlug": null,
+            "urlSlug": "0d48da287df14493a7415b560ec1bbb3",
+            "url": null,
+            "items": [
+              {
+                "id": "6047532dd78a456593d0ffd6602a7218",
+                "namespace": "bc079f73f020432fac896d30c8e2c330"
+              }
+            ],
+            "customAttributes": [
+              { "key": "autoGeneratedPrice", "value": "false" },
+              { "key": "isManuallySetPCReleaseDate", "value": "true" }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games/edition/base" },
+              { "path": "games/edition" },
+              { "path": "games" }
+            ],
+            "tags": [
+              { "id": "1264" },
+              { "id": "1203" },
+              { "id": "1367" },
+              { "id": "21129" },
+              { "id": "1370" },
+              { "id": "1386" },
+              { "id": "1115" },
+              { "id": "9547" },
+              { "id": "9549" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                { "pageSlug": "gloomhaven-92f741", "pageType": "productHome" }
+              ]
+            },
+            "offerMappings": [
+              { "pageSlug": "gloomhaven-92f741", "pageType": "productHome" }
+            ],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 23900,
+                "voucherDiscount": 0,
+                "discount": 23900,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 239.00",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": [
+                    {
+                      "id": "d7d80cbb1f5446f1a051df17c47d2b43",
+                      "endDate": "2022-09-29T15:00:00.000Z",
+                      "discountSetting": { "discountType": "PERCENTAGE" }
+                    }
+                  ]
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-09-22T15:00:00.000Z",
+                      "endDate": "2022-09-29T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Runbow",
+            "id": "d98bc011d00a4323b2c49c7dc9d75969",
+            "namespace": "aa7c3e6b5a2a4ca8962270c15bddb861",
+            "description": "Runbow, and all its 9-player madness, is now on Epic!\nWith tons of competitive modes for up to 9 players--locally and online--and a massive Single Player Adventure, Runbow is the crazy, colour-based platformer you've been waiting for.",
+            "effectiveDate": "2022-09-29T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/spt-assets/c4dde13fcdea4aaa84dabb303006a870/runbow-offer-v8wvy.png"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/spt-assets/c4dde13fcdea4aaa84dabb303006a870/download-runbow-offer-6amjn.png"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/spt-assets/c4dde13fcdea4aaa84dabb303006a870/download-runbow-offer-6amjn.png"
+              }
+            ],
+            "seller": {
+              "id": "o-pnuulzlud57lxukjrj4nzg3yz6tw7a",
+              "name": "13AM Games"
+            },
+            "productSlug": null,
+            "urlSlug": "0adfe9efe40540419fe3fe3f02a2560e",
+            "url": null,
+            "items": [
+              {
+                "id": "9ccba3c50eb444f58ff7ca5eda873389",
+                "namespace": "aa7c3e6b5a2a4ca8962270c15bddb861"
+              }
+            ],
+            "customAttributes": [
+              { "key": "autoGeneratedPrice", "value": "false" },
+              { "key": "isManuallySetPCReleaseDate", "value": "true" }
+            ],
+            "categories": [
+              { "path": "freegames" },
+              { "path": "games/edition/base" },
+              { "path": "games/edition" },
+              { "path": "games" }
+            ],
+            "tags": [
+              { "id": "1264" },
+              { "id": "1203" },
+              { "id": "1299" },
+              { "id": "1110" },
+              { "id": "1370" },
+              { "id": "9547" },
+              { "id": "9549" },
+              { "id": "1151" },
+              { "id": "1263" }
+            ],
+            "catalogNs": {
+              "mappings": [
+                { "pageSlug": "runbow-fc9fa4", "pageType": "productHome" }
+              ]
+            },
+            "offerMappings": [
+              { "pageSlug": "runbow-fc9fa4", "pageType": "productHome" }
+            ],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 10400,
+                "originalPrice": 10400,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "SEK 104.00",
+                  "discountPrice": "SEK 104.00",
+                  "intermediatePrice": "SEK 104.00"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": {
+              "promotionalOffers": [],
+              "upcomingPromotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-09-29T15:00:00.000Z",
+                      "endDate": "2022-10-06T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "Maneater",
+            "id": "a22a7af179c54b86a93f3193ace8f7f4",
+            "namespace": "d5241c76f178492ea1540fce45616757",
+            "description": "Maneater",
+            "effectiveDate": "2099-01-01T00:00:00.000Z",
+            "offerType": "OTHERS",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": true,
+            "keyImages": [
+              {
+                "type": "VaultClosed",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-carousel-mobile-thumbnail-1200x1600_1200x1600-1f45bf1ceb21c1ca2947f6df5ece5346"
+              },
+              {
+                "type": "VaultOpened",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              }
+            ],
+            "seller": {
+              "id": "o-ufmrk5furrrxgsp5tdngefzt5rxdcn",
+              "name": "Epic Dev Test Account"
+            },
+            "productSlug": "maneater",
+            "urlSlug": "game-4",
+            "url": null,
+            "items": [
+              {
+                "id": "8341d7c7e4534db7848cc428aa4cbe5a",
+                "namespace": "d5241c76f178492ea1540fce45616757"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.freegames.vault.close",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.slug",
+                "value": "free-games"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.open",
+                "value": "[]"
+              },
+              { "key": "com.epicgames.app.productSlug", "value": "maneater" }
+            ],
+            "categories": [
+              { "path": "freegames/vaulted" },
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "applications" }
+            ],
+            "tags": [],
+            "catalogNs": { "mappings": [] },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 0,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "0",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Wolfenstein: The New Order",
+            "id": "1d41b93230e54bdd80c559d72adb7f4f",
+            "namespace": "d5241c76f178492ea1540fce45616757",
+            "description": "Wolfenstein: The New Order",
+            "effectiveDate": "2099-01-01T00:00:00.000Z",
+            "offerType": "OTHERS",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": true,
+            "keyImages": [
+              {
+                "type": "VaultClosed",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-carousel-mobile-thumbnail-1200x1600_1200x1600-1f45bf1ceb21c1ca2947f6df5ece5346"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              },
+              {
+                "type": "VaultOpened",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              }
+            ],
+            "seller": {
+              "id": "o-ufmrk5furrrxgsp5tdngefzt5rxdcn",
+              "name": "Epic Dev Test Account"
+            },
+            "productSlug": "wolfenstein-the-new-order",
+            "urlSlug": "game-3",
+            "url": null,
+            "items": [
+              {
+                "id": "8341d7c7e4534db7848cc428aa4cbe5a",
+                "namespace": "d5241c76f178492ea1540fce45616757"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.freegames.vault.close",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.slug",
+                "value": "free-games"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.open",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "wolfenstein-the-new-order"
+              }
+            ],
+            "categories": [
+              { "path": "freegames/vaulted" },
+              { "path": "freegames" },
+              { "path": "games" },
+              { "path": "applications" }
+            ],
+            "tags": [],
+            "catalogNs": { "mappings": [] },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 0,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "SEK",
+                "currencyInfo": { "decimals": 2 },
+                "fmtPrice": {
+                  "originalPrice": "0",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [{ "appliedRules": [] }]
+            },
+            "promotions": null
+          }
+        ],
+        "paging": { "count": 1000, "total": 12 }
+      }
+    }
+  },
+  "extensions": {}
+}

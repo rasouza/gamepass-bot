@@ -30,6 +30,7 @@
     "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.21",
     "node-cron": "^3.0.0",
+    "object-mapper": "^6.2.0",
     "winston": "^3.3.3",
     "yargs": "^17.0.1"
   },
@@ -40,7 +41,9 @@
     "@babel/preset-typescript": "^7.16.7",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.185",
     "@types/node-cron": "^3.0.1",
+    "@types/object-mapper": "^6.2.0",
     "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
