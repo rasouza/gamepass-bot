@@ -1,5 +1,5 @@
-import fs from 'fs'
 import GameDB from './game'
+import gamepass from './__fixtures__/gamepass.json'
 
 const mockIn = jest.fn()
 const mockMaybeSingle = jest.fn()
@@ -30,10 +30,7 @@ describe('GameDB', () => {
       expect(games).toHaveLength(0)
     })
     test('should return a list of games', async () => {
-      const data = JSON.parse(
-        fs.readFileSync('./src/models/__fixtures__/game.json', 'utf-8')
-      )
-      mockSelect.mockReturnValueOnce({ data })
+      mockSelect.mockReturnValueOnce({ data: gamepass })
       const db = new GameDB()
       const games = await db.getAll()
 
@@ -52,10 +49,7 @@ describe('GameDB', () => {
       expect(games).toHaveLength(0)
     })
     test('should return a list of games', async () => {
-      const data = JSON.parse(
-        fs.readFileSync('./src/models/__fixtures__/game.json', 'utf-8')
-      )
-      mockIn.mockReturnValueOnce({ data })
+      mockIn.mockReturnValueOnce({ data: gamepass })
       const db = new GameDB()
       const games = await db.getAllById(['9PJ2DSSXZR0P', '9N8CD0XZKLP4'])
 

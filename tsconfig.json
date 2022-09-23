@@ -3,14 +3,12 @@
   "compilerOptions": {
     "noEmit": true,
     "baseUrl": "src",
+    "resolveJsonModule": true,
 
     // Ensure that Babel can safely transpile files in the TypeScript project
     "isolatedModules": true
   },
   "ts-node": {
-    "require": [
-      "tsconfig-paths/register",
-      "dotenv/config"
-    ]
+    "require": ["tsconfig-paths/register", "dotenv/config"]
   }
 }
