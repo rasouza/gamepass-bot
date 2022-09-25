@@ -3,6 +3,10 @@ import { Client } from 'discord.js'
 import { buildProviderModule } from 'inversify-binding-decorators'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
+import 'usecases'
+import 'models'
+import 'presenters'
+
 const { SUPABASE_URL, SUPABASE_KEY } = process.env
 
 const createDiscord = () => new Client()
@@ -13,8 +17,6 @@ const container = new Container()
 
 container.bind<Client>(Client).toDynamicValue(createDiscord)
 container.bind<SupabaseClient>(SupabaseClient).toDynamicValue(createSupabase)
-
-// TODO: Axios conditional binding
 
 container.load(buildProviderModule())
 

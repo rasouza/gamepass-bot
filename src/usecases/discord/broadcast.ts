@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import { MessageEmbed, Webhook } from 'discord.js'
 import { provide } from 'inversify-binding-decorators'
 

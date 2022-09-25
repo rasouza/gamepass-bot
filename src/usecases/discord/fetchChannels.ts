@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import { Client } from 'discord.js'
 import { provide } from 'inversify-binding-decorators'
 import { map } from 'lodash/fp'
