@@ -13,6 +13,7 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "import/first": 0,
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "no-useless-constructor": "off"
   }
 }

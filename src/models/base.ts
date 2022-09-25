@@ -1,18 +1,19 @@
-import { createClient } from '@supabase/supabase-js'
+import { SupabaseClient } from '@supabase/supabase-js'
 import Logger from 'config/logger'
+import { inject } from 'inversify'
+import { provide } from 'inversify-binding-decorators'
 
-export const client = createClient(
-  process.env.SUPABASE_URL as string,
-  process.env.SUPABASE_KEY as string
-)
-
+// TODO: rename folder to infrastructure/repositories
 interface PK {
   id: string | number
 }
 
+@provide(DB)
 export abstract class DB<Model extends PK> {
   abstract name: string
-  client = client
+
+  @inject(SupabaseClient)
+  protected client!: SupabaseClient
 
   getTable() {
     return this.client.from<Model>(this.name)
