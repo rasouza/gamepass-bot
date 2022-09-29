@@ -2,7 +2,13 @@ import { Set } from 'immutable'
 import { provide } from 'inversify-binding-decorators'
 import { isEmpty } from 'lodash'
 
-import { EnrichGames, FetchList, InsertGames, ListGamesFromDB } from 'usecases'
+import {
+  EnrichGames,
+  FetchList,
+  InsertGames,
+  ListGamesFromDB,
+  DeleteGames
+} from 'usecases'
 
 // TODO: Extract this interface
 interface Sync {
@@ -19,7 +25,8 @@ export class XboxSync implements Sync {
     private fetchList: FetchList,
     private enrichGames: EnrichGames,
     private insertGames: InsertGames,
-    private listGamesFromDB: ListGamesFromDB
+    private listGamesFromDB: ListGamesFromDB,
+    private deleteGames: DeleteGames
   ) {
     this.xboxList = this.fetchList.execute()
     this.dbList = this.listGamesFromDB.execute()
@@ -30,7 +37,6 @@ export class XboxSync implements Sync {
     const dbCatalog = Set(await this.dbList)
 
     const diff = xboxCatalog.subtract(dbCatalog)
-
     if (isEmpty(diff.toArray())) return
 
     const newCatalog = await this.enrichGames.execute(diff.toArray())
@@ -38,5 +44,13 @@ export class XboxSync implements Sync {
     await this.insertGames.execute(newCatalog)
   }
 
-  public async clean() {}
+  public async clean() {
+    const xboxCatalog = Set(await this.xboxList)
+    const dbCatalog = Set(await this.dbList)
+
+    const diff = dbCatalog.subtract(xboxCatalog)
+    if (isEmpty(diff.toArray())) return
+
+    this.deleteGames.execute(diff.toArray())
+  }
 }
