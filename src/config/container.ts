@@ -13,6 +13,7 @@ import Logger from './logger'
 import 'usecases'
 import 'models'
 import 'presenters'
+import 'handlers'
 
 const container = new Container()
 
@@ -26,6 +27,7 @@ container.bind<Client>(Client).toConstantValue(createDiscord())
 container.bind<SupabaseClient>(SupabaseClient).toConstantValue(createSupabase())
 container.bind<WinstonLogger>('Logger').toConstantValue(Logger)
 
+// Custom Clients
 const createAxios =
   container.get<interfaces.Factory<AxiosInstance>>('AxiosFactory')
 const xboxClient = createAxios(
@@ -38,6 +40,7 @@ container
   .toConstantValue(xboxClient)
   .whenTargetNamed('xbox')
 
+// Load Providers
 container.load(buildProviderModule())
 
 export { container }

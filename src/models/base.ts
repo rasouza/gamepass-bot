@@ -19,6 +19,15 @@ export abstract class DB<Model extends PK> {
     return this.client.from<Model>(this.name)
   }
 
+  async pluck(field: keyof Model): Promise<Model[keyof Model][]> {
+    const { data, error } = await this.getTable().select(field as string)
+    if (error) Logger.error(error)
+
+    if (!data) return []
+    const response = data.map((item: Model) => item[field])
+    return response
+  }
+
   async getAll(): Promise<Model[]> {
     const { data, error } = await this.getTable().select('*')
     if (error) Logger.error(error)
