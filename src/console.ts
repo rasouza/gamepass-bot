@@ -12,12 +12,15 @@ import Subscription from 'domain/Subscription'
 import { container } from 'config/container'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { FetchList } from 'usecases/xbox/fetchList'
-// import { FetchChannels } from 'usecases/discord/fetchChannels'
+import { EnrichGames } from 'usecases'
+import { XboxSync } from 'handlers/sync'
 
 const supabase = container.get<SupabaseClient>(SupabaseClient)
 const subscriptionDB = container.get<SubscriptionDB>(SubscriptionDB)
+const gameDB = container.get<GameDB>(GameDB)
 const fetchList = container.get<FetchList>(FetchList)
-// const fetchChannels = container.get<FetchChannels>(FetchChannels)
+const enrichGames = container.get<EnrichGames>(EnrichGames)
+const xboxSync = container.get<XboxSync>(XboxSync)
 
 const server = repl.start()
 Object.assign(server.context, {
@@ -28,8 +31,10 @@ Object.assign(server.context, {
   Game,
   Subscription,
   subscriptionDB,
-  // fetchChannels
+  gameDB,
   fetchList,
+  enrichGames,
+  xboxSync,
   container
 })
 
