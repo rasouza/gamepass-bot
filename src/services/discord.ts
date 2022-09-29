@@ -4,7 +4,6 @@ import { Client, Webhook, MessageEmbed } from 'discord.js'
 
 import Settings from 'config/settings'
 import Game from 'domain/Game'
-import { provide } from 'inversify-binding-decorators'
 
 const MAX_LENGTH = 300
 
@@ -44,15 +43,4 @@ export function broadcast(webhooks: Webhook[], msg: string, game: Game): void {
 
 export async function getAllWebhooks(ids: string[]): Promise<Webhook[] | null> {
   return await Promise.all(ids.map((id) => client.fetchWebhook(id)))
-}
-
-@provide(Discord)
-export class Discord {
-  private _client: Client
-
-  constructor(client: Client) {
-    this._client = client
-  }
-
-  async getAllWebhooks() {}
 }

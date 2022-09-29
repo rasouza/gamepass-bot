@@ -1,22 +1,42 @@
-import { Container } from 'inversify'
+import { Container, interfaces } from 'inversify'
 import { Client } from 'discord.js'
 import { buildProviderModule } from 'inversify-binding-decorators'
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { SupabaseClient } from '@supabase/supabase-js'
+import { AxiosInstance } from 'axios'
+import { Logger as WinstonLogger } from 'winston'
+
+import { axiosFactory } from './axios'
+import { createSupabase } from './supabase'
+import { createDiscord } from './discord'
+import Logger from './logger'
 
 import 'usecases'
 import 'models'
 import 'presenters'
 
-const { SUPABASE_URL, SUPABASE_KEY } = process.env
-
-const createDiscord = () => new Client()
-const createSupabase = () =>
-  createClient(SUPABASE_URL as string, SUPABASE_KEY as string)
-
 const container = new Container()
 
-container.bind<Client>(Client).toDynamicValue(createDiscord)
-container.bind<SupabaseClient>(SupabaseClient).toDynamicValue(createSupabase)
+// Factories
+container
+  .bind<interfaces.Factory<AxiosInstance>>('AxiosFactory')
+  .toFactory<AxiosInstance, [string, string]>(axiosFactory)
+
+// Bindings
+container.bind<Client>(Client).toConstantValue(createDiscord())
+container.bind<SupabaseClient>(SupabaseClient).toConstantValue(createSupabase())
+container.bind<WinstonLogger>('Logger').toConstantValue(Logger)
+
+const createAxios =
+  container.get<interfaces.Factory<AxiosInstance>>('AxiosFactory')
+const xboxClient = createAxios(
+  'XBox Service',
+  'https://catalog.gamepass.com'
+) as AxiosInstance
+
+container
+  .bind<AxiosInstance>('HttpClient')
+  .toConstantValue(xboxClient)
+  .whenTargetNamed('xbox')
 
 container.load(buildProviderModule())
 
