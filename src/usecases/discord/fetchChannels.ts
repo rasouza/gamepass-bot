@@ -3,8 +3,8 @@ import { Client } from 'discord.js'
 import { provide } from 'inversify-binding-decorators'
 import { map } from 'lodash/fp'
 
-import Subscription from 'domain/Subscription'
-import SubscriptionDB from 'models/subscription'
+import Subscription from '../../domain/Subscription'
+import SubscriptionDB from '../../models/subscription'
 
 @provide(FetchChannels)
 export class FetchChannels {

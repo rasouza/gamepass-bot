@@ -2,7 +2,7 @@ import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 import { Logger } from 'winston'
 
-import GameDB from 'models/game'
+import GameDB from '../../models/game'
 
 @provide(ListGamesFromDB)
 export class ListGamesFromDB {

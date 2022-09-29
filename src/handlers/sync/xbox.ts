@@ -1,8 +1,8 @@
-import logger from 'config/logger'
 import { Set } from 'immutable'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 import { isEmpty } from 'lodash'
+import { Logger } from 'winston'
 
 import {
   EnrichGames,
@@ -10,8 +10,7 @@ import {
   InsertGames,
   ListGamesFromDB,
   DeleteGames
-} from 'usecases'
-import { Logger } from 'winston'
+} from '../../usecases'
 
 // TODO: Extract this interface
 interface Sync {
@@ -46,7 +45,7 @@ export class XboxSync implements Sync {
     const newCatalog = await this.enrichGames.execute(diff.toArray())
 
     if (dryRun) {
-      logger.info(
+      this.logger.info(
         `[XboxSync][dry-run mode] ${newCatalog.length} games should be added`,
         { games: newCatalog }
       )
@@ -64,7 +63,7 @@ export class XboxSync implements Sync {
     if (isEmpty(diff)) return
 
     if (dryRun) {
-      logger.info(
+      this.logger.info(
         `[XboxSync][dry-run mode] ${diff.length} games should be deleted`
       )
       return

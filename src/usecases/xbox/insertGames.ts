@@ -3,8 +3,8 @@ import { provide } from 'inversify-binding-decorators'
 import { isEmpty } from 'lodash/fp'
 import { Logger } from 'winston'
 
-import Game from 'domain/Game'
-import GameDB from 'models/game'
+import Game from '../../domain/Game'
+import GameDB from '../../models/game'
 
 @provide(InsertGames)
 export class InsertGames {

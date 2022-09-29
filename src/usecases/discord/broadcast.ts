@@ -2,7 +2,7 @@ import 'reflect-metadata'
 import { MessageEmbed, Webhook } from 'discord.js'
 import { provide } from 'inversify-binding-decorators'
 
-import Settings from 'config/settings'
+import Settings from '../../config/settings'
 import { FetchChannels } from './fetchChannels'
 
 const { username, avatarURL } = Settings

@@ -7,7 +7,7 @@ import { curryRightN, isEmpty, map } from 'lodash/fp'
 import { merge } from 'object-mapper'
 
 import schema from './schemas'
-import Game from 'domain/Game'
+import Game from '../../domain/Game'
 
 const mergeFP = curryRightN(2, merge)
 

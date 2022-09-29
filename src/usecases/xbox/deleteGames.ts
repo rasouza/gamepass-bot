@@ -3,7 +3,7 @@ import { provide } from 'inversify-binding-decorators'
 import { isEmpty } from 'lodash/fp'
 import { Logger } from 'winston'
 
-import GameDB from 'models/game'
+import GameDB from '../../models/game'
 
 @provide(DeleteGames)
 export class DeleteGames {

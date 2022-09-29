@@ -3,7 +3,7 @@ import fileSize from 'filesize'
 import { provide } from 'inversify-binding-decorators'
 import { MessageEmbed, MessageEmbedOptions } from 'discord.js'
 
-import Game from 'domain/Game'
+import Game from '../domain/Game'
 
 // TODO: Extract to config
 const MAX_LENGTH = 300

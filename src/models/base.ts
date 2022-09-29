@@ -1,7 +1,10 @@
 import { SupabaseClient } from '@supabase/supabase-js'
-import Logger from 'config/logger'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
+
+import Logger from '../config/logger'
+
+// TODO: Inject Logger
 
 // TODO: rename folder to infrastructure/repositories
 interface PK {
