@@ -1,8 +1,8 @@
 import { Collection, Message } from 'discord.js'
+import { multiInject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 
 import Settings from '../../config/settings'
-import { SubscribeCommand } from '../../usecases'
 
 const { prefix } = Settings
 
@@ -17,8 +17,11 @@ export interface Command {
 export class CommandHandler {
   private commands: Collection<string, Command> = new Collection()
 
-  constructor(private subscribe: SubscribeCommand) {
-    this.commands.set(this.subscribe.name, this.subscribe)
+  constructor(
+    @multiInject('Command')
+    commands: Command[]
+  ) {
+    commands.forEach((command) => this.commands.set(command.name, command))
   }
 
   public run(message: Message) {
@@ -26,6 +29,7 @@ export class CommandHandler {
 
     const args = message.content.slice(prefix.length).trim().split(/ +/)
     const command = args.shift()?.toLowerCase()
+
     if (!command || !this.commands.has(command)) return
     try {
       this.commands.get(command)?.execute(message, args)
