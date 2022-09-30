@@ -2,7 +2,7 @@ import repl from 'repl'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { Client } from 'discord.js'
 
-import { container } from '../config/container'
+import { container } from '../inversify.config'
 
 import { GameDB, SubscriptionDB } from './db'
 

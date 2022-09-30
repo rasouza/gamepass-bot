@@ -2,7 +2,7 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import cron from 'node-cron'
 
-import { container } from '../config/container'
+import { container } from '../inversify.config'
 import { XboxSync } from '../handlers/sync'
 
 const CRON = process.env.CRON || '0 */1 * * * *'

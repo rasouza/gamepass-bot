@@ -5,15 +5,15 @@ import { SupabaseClient } from '@supabase/supabase-js'
 import { AxiosInstance } from 'axios'
 import { Logger as WinstonLogger } from 'winston'
 
-import { axiosFactory } from './axios'
-import { createSupabase } from './supabase'
-import { createDiscord } from './discord'
-import Logger from './logger'
+import { axiosFactory } from './lib/axios'
+import { createSupabase } from './infrastructure/db/supabase'
+import { createDiscord } from './lib/discord'
+import Logger from './lib/winston'
 
-import '../presenters'
-import '../infrastructure/db/repositories'
-import '../usecases'
-import '../handlers'
+import './presenters'
+import './infrastructure/db/repositories'
+import './usecases'
+import './handlers'
 
 const container = new Container()
 
