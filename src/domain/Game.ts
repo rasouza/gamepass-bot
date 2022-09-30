@@ -1,4 +1,4 @@
-export default class Game {
+export default interface Game {
   id: string
   title: string
   developer: string
@@ -7,15 +7,4 @@ export default class Game {
   size: number | null
   description: string
   last_sync?: Date // eslint-disable-line camelcase
-
-  constructor(game: Game) {
-    this.id = game.id
-    this.title = game.title
-    this.developer = game.developer
-    this.image = game.image
-    this.price = game.price
-    this.size = game.size
-    this.description = game.description
-    this.last_sync = game.last_sync || new Date()
-  }
 }
