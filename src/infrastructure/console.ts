@@ -4,8 +4,7 @@ import { Client } from 'discord.js'
 
 import { container } from '../config/container'
 
-import GameDB from './db/repositories/game'
-import SubscriptionDB from './db/repositories/subscription'
+import { GameDB, SubscriptionDB } from './db'
 
 const discord = container.get<Client>(Client)
 const supabase = container.get<SupabaseClient>(SupabaseClient)

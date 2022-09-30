@@ -4,6 +4,6 @@ import { DB } from './base'
 import Subscription from '../../../domain/Subscription'
 
 @provide(SubscriptionDB)
-export default class SubscriptionDB extends DB<Subscription> {
+export class SubscriptionDB extends DB<Subscription> {
   name = 'subscriptions'
 }

@@ -5,7 +5,6 @@ import { MessageEmbed } from 'discord.js'
 
 import Game from '../domain/Game'
 
-// TODO: Extract to config
 const MAX_LENGTH = 300
 
 @provide(GameEmbed)

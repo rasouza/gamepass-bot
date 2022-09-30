@@ -1,12 +1,8 @@
 import { SupabaseClient } from '@supabase/supabase-js'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
+import { Logger } from 'winston'
 
-import Logger from '../../../config/logger'
-
-// TODO: Inject Logger
-
-// TODO: rename folder to infrastructure/repositories
 interface PK {
   id: string | number
 }
@@ -18,13 +14,16 @@ export abstract class DB<Model extends PK> {
   @inject(SupabaseClient)
   protected client!: SupabaseClient
 
+  @inject('Logger')
+  protected logger!: Logger
+
   getTable() {
     return this.client.from<Model>(this.name)
   }
 
   async pluck(field: keyof Model): Promise<Model[keyof Model][]> {
     const { data, error } = await this.getTable().select(field as string)
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     if (!data) return []
     const response = data.map((item: Model) => item[field])
@@ -33,14 +32,14 @@ export abstract class DB<Model extends PK> {
 
   async getAll(): Promise<Model[]> {
     const { data, error } = await this.getTable().select('*')
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return data ?? []
   }
 
   async getAllById(ids: Model[keyof Model][]): Promise<Model[]> {
     const { data, error } = await this.getTable().select('*').in('id', ids)
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return data ?? []
   }
@@ -50,7 +49,7 @@ export abstract class DB<Model extends PK> {
       .select('*')
       .eq('id', id)
       .maybeSingle()
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return data
   }
@@ -58,7 +57,7 @@ export abstract class DB<Model extends PK> {
   async insert(domain: Model | Model[]): Promise<Model | Model[] | null> {
     const { data, error } = await this.getTable().insert(domain)
 
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
     return data
   }
 
@@ -67,14 +66,14 @@ export abstract class DB<Model extends PK> {
       .update(model)
       .eq('id', id)
       .single()
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return data
   }
 
   async delete(id: Model[keyof Model]): Promise<Model | null> {
     const { data, error } = await this.getTable().delete().eq('id', id).single()
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return data
   }
@@ -84,7 +83,7 @@ export abstract class DB<Model extends PK> {
       .select('*')
       .eq('id', id)
       .maybeSingle()
-    if (error) Logger.error(error)
+    if (error) this.logger.error(error)
 
     return !!data
   }
