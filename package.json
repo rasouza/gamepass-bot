@@ -12,7 +12,7 @@
     "start": "concurrently -k -c \"cyan.bold\" \"npm:start:*\"",
     "start:bot": "node --enable-source-maps dist/bot.js",
     "start:sync": "node --enable-source-maps dist/infrastructure/sync.js",
-    "console": "nodemon -x ts-node src/console.ts",
+    "console": "nodemon -x ts-node src/infrastructure/console.ts",
     "watch:bot": "nodemon -x ts-node src/infrastructure/bot.ts",
     "watch:sync": "nodemon -x ts-node src/infrastructure/sync.ts --dry-run",
     "watch": "concurrently -k -c \"cyan.bold\" \"npm:watch:*\"",

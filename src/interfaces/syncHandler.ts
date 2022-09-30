@@ -1,4 +1,4 @@
 export interface SyncHandler {
-  insert(): void
+  insert(dryRun: boolean): void
   clean(): void
 }

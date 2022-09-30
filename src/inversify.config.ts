@@ -33,15 +33,24 @@ container.bind<WinstonLogger>('Logger').toConstantValue(Logger)
 // Custom Clients
 const createAxios =
   container.get<interfaces.Factory<AxiosInstance>>('AxiosFactory')
+
 const xboxClient = createAxios(
   'XBox Service',
   'https://catalog.gamepass.com'
+) as AxiosInstance
+const epicClient = createAxios(
+  'Epic Service',
+  'https://store-site-backend-static-ipv4.ak.epicgames.com'
 ) as AxiosInstance
 
 container
   .bind<AxiosInstance>('HttpClient')
   .toConstantValue(xboxClient)
   .whenTargetNamed('xbox')
+container
+  .bind<AxiosInstance>('HttpClient')
+  .toConstantValue(epicClient)
+  .whenTargetNamed('epic')
 
 // Load Providers
 container.load(buildProviderModule())

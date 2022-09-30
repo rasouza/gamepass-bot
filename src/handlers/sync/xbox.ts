@@ -1,7 +1,6 @@
 import { Set } from 'immutable'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
-import { isEmpty } from 'lodash'
 import { Logger } from 'winston'
 
 import { SyncHandler } from '../../interfaces'
@@ -15,8 +14,8 @@ import {
 
 @provide(XboxSync)
 export class XboxSync implements SyncHandler {
-  private xboxList: Promise<string[]>
-  private dbList: Promise<string[]>
+  private xboxList!: Set<string>
+  private dbList!: Set<string>
 
   constructor(
     private fetchList: FetchList,
@@ -25,17 +24,18 @@ export class XboxSync implements SyncHandler {
     private listGamesFromDB: ListGamesFromDB,
     private deleteGames: DeleteGames,
     @inject('Logger') private logger: Logger
-  ) {
-    this.xboxList = this.fetchList.execute()
-    this.dbList = this.listGamesFromDB.execute()
+  ) {}
+
+  private async load() {
+    this.xboxList = Set(await this.fetchList.execute())
+    this.dbList = Set(await this.listGamesFromDB.execute())
   }
 
   public async insert(dryRun = false) {
-    const xboxCatalog = Set(await this.xboxList)
-    const dbCatalog = Set(await this.dbList)
+    await this.load()
 
-    const diff = xboxCatalog.subtract(dbCatalog)
-    if (isEmpty(diff.toArray())) return
+    const diff = this.xboxList.subtract(this.dbList)
+    if (diff.isEmpty()) return
 
     const newCatalog = await this.enrichGames.execute(diff.toArray())
 
@@ -54,16 +54,16 @@ export class XboxSync implements SyncHandler {
     const xboxCatalog = Set(await this.xboxList)
     const dbCatalog = Set(await this.dbList)
 
-    const diff = dbCatalog.subtract(xboxCatalog).toArray()
-    if (isEmpty(diff)) return
+    const diff = dbCatalog.subtract(xboxCatalog)
+    if (diff.isEmpty()) return
 
     if (dryRun) {
       this.logger.info(
-        `[XboxSync][dry-run mode] ${diff.length} games should be deleted`
+        `[XboxSync][dry-run mode] ${diff.count()} games should be deleted`
       )
       return
     }
 
-    this.deleteGames.execute(diff)
+    this.deleteGames.execute(diff.toArray())
   }
 }
