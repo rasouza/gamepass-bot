@@ -10,9 +10,9 @@ import { createSupabase } from './supabase'
 import { createDiscord } from './discord'
 import Logger from './logger'
 
-import '../usecases'
-import '../models'
 import '../presenters'
+import '../models'
+import '../usecases'
 import '../handlers'
 
 const container = new Container()
