@@ -2,12 +2,12 @@ import 'reflect-metadata'
 import { provide } from 'inversify-binding-decorators'
 import { inject, named } from 'inversify'
 import { AxiosInstance } from 'axios'
-import { XboxGame } from 'interfaces'
 import { curryRightN, isEmpty, map } from 'lodash/fp'
 import { merge } from 'object-mapper'
 
 import schema from './schemas'
 import Game from '../../domain/Game'
+import { XboxGame } from '../../interfaces'
 
 const mergeFP = curryRightN(2, merge)
 

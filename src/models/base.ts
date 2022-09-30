@@ -88,4 +88,8 @@ export abstract class DB<Model extends PK> {
 
     return !!data
   }
+
+  subscribe(fn: (item: Model) => void) {
+    this.getTable().on('INSERT', (payload) => fn(payload.new))
+  }
 }

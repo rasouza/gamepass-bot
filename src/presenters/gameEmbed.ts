@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import fileSize from 'filesize'
 import { provide } from 'inversify-binding-decorators'
-import { MessageEmbed, MessageEmbedOptions } from 'discord.js'
+import { MessageEmbed } from 'discord.js'
 
 import Game from '../domain/Game'
 
@@ -10,9 +10,8 @@ const MAX_LENGTH = 300
 
 @provide(GameEmbed)
 export class GameEmbed extends MessageEmbed {
-  constructor(game: Game, options?: MessageEmbed | MessageEmbedOptions) {
+  show(game: Game) {
     const { title, developer, description, price, size, image } = game
-    super(options)
 
     this.setTitle(title)
     this.setAuthor(developer)
@@ -21,6 +20,8 @@ export class GameEmbed extends MessageEmbed {
     if (price) this.addField('Price', `$${price / 100}`, true)
     if (size) this.addField('Size', fileSize(size), true)
     if (image) this.setImage(image)
+
+    return this
   }
 
   private truncate(text: string) {
