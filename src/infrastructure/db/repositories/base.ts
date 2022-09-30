@@ -2,7 +2,7 @@ import { SupabaseClient } from '@supabase/supabase-js'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 
-import Logger from '../config/logger'
+import Logger from '../../../config/logger'
 
 // TODO: Inject Logger
 

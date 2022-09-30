@@ -1,6 +1,6 @@
 import { provide } from 'inversify-binding-decorators'
 import Game from '../../domain/Game'
-import GameDB from '../../models/game'
+import GameDB from '../../infrastructure/db/repositories/game'
 
 @provide(OnInsertXbox)
 export class OnInsertXbox {

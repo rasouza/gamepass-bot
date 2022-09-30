@@ -11,7 +11,7 @@ import { createDiscord } from './discord'
 import Logger from './logger'
 
 import '../presenters'
-import '../models'
+import '../infrastructure/db/repositories'
 import '../usecases'
 import '../handlers'
 

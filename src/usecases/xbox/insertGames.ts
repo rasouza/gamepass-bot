@@ -4,7 +4,7 @@ import { isEmpty } from 'lodash/fp'
 import { Logger } from 'winston'
 
 import Game from '../../domain/Game'
-import GameDB from '../../models/game'
+import GameDB from '../../infrastructure/db/repositories/game'
 
 @provide(InsertGames)
 export class InsertGames {

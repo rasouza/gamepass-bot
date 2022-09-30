@@ -4,7 +4,7 @@ import { provide } from 'inversify-binding-decorators'
 import { Logger } from 'winston'
 
 import Settings from '../../../config/settings'
-import SubscriptionDB from '../../../models/subscription'
+import SubscriptionDB from '../../../infrastructure/db/repositories/subscription'
 
 const { username, avatarURL } = Settings
 
