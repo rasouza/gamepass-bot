@@ -1,5 +1,5 @@
-import { Container, decorate, injectable, interfaces } from 'inversify'
-import { Client, MessageEmbed } from 'discord.js'
+import { Container, interfaces } from 'inversify'
+import { Client } from 'discord.js'
 import { buildProviderModule } from 'inversify-binding-decorators'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { AxiosInstance } from 'axios'
@@ -17,9 +17,6 @@ import './handlers'
 
 const container = new Container()
 
-// Decorators
-decorate(injectable(), MessageEmbed)
-
 // Factories
 container
   .bind<interfaces.Factory<AxiosInstance>>('AxiosFactory')
@@ -33,15 +30,24 @@ container.bind<WinstonLogger>('Logger').toConstantValue(Logger)
 // Custom Clients
 const createAxios =
   container.get<interfaces.Factory<AxiosInstance>>('AxiosFactory')
+
 const xboxClient = createAxios(
   'XBox Service',
   'https://catalog.gamepass.com'
+) as AxiosInstance
+const epicClient = createAxios(
+  'Epic Service',
+  'https://store-site-backend-static-ipv4.ak.epicgames.com'
 ) as AxiosInstance
 
 container
   .bind<AxiosInstance>('HttpClient')
   .toConstantValue(xboxClient)
   .whenTargetNamed('xbox')
+container
+  .bind<AxiosInstance>('HttpClient')
+  .toConstantValue(epicClient)
+  .whenTargetNamed('epic')
 
 // Load Providers
 container.load(buildProviderModule())
