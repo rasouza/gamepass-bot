@@ -1,16 +1,14 @@
 {
   "extends": "@tsconfig/recommended",
   "compilerOptions": {
-    "noEmit": true,
-    "baseUrl": "src",
-
-    // Ensure that Babel can safely transpile files in the TypeScript project
-    "isolatedModules": true
+    "rootDir": "src",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata", "jest"]
   },
   "ts-node": {
-    "require": [
-      "tsconfig-paths/register",
-      "dotenv/config"
-    ]
+    "require": ["tsconfig-paths/register", "dotenv/config"]
   }
 }
