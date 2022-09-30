@@ -17,6 +17,6 @@ export class BotHandler {
     const onMessage = this.commandHandler.run.bind(this.commandHandler)
 
     this.discord.once('ready', onReady)
-    this.discord.on('message', onMessage)
+    this.discord.on('messageCreate', onMessage)
   }
 }

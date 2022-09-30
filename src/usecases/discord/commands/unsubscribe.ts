@@ -1,4 +1,4 @@
-import { Message, TextChannel } from 'discord.js'
+import { ChannelType, Message, TextChannel } from 'discord.js'
 import { inject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 import { Logger } from 'winston'
@@ -21,7 +21,7 @@ export class UnsubscribeCommand {
   ) {}
 
   public async execute(message: Message) {
-    if (message.channel.type !== 'text') return
+    if (message.channel.type !== ChannelType.GuildText) return
 
     const { guild, member } = message
     const channel = message.channel as TextChannel

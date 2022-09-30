@@ -10,5 +10,6 @@
   },
   "ts-node": {
     "require": ["tsconfig-paths/register", "dotenv/config"]
-  }
+  },
+  "exclude": ["src/**/*.spec.ts"]
 }

@@ -17,9 +17,9 @@ export class FetchChannels {
     return await Promise.all(map(fetchWebhook)(subs))
   }
 
-  public async execute() {
+  public async execute(type: string) {
     // TODO: Wrap in Task (fp-ts)
-    const subs = await this.subsDB.getAll()
+    const subs = await this.subsDB.getByType(type)
     return await this.getAllWebhooks(subs)
   }
 }

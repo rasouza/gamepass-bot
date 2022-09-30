@@ -1,5 +1,5 @@
-import { Container, decorate, injectable, interfaces } from 'inversify'
-import { Client, MessageEmbed } from 'discord.js'
+import { Container, interfaces } from 'inversify'
+import { Client } from 'discord.js'
 import { buildProviderModule } from 'inversify-binding-decorators'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { AxiosInstance } from 'axios'
@@ -16,9 +16,6 @@ import './usecases'
 import './handlers'
 
 const container = new Container()
-
-// Decorators
-decorate(injectable(), MessageEmbed)
 
 // Factories
 container
