@@ -3,15 +3,9 @@ import { multiInject } from 'inversify'
 import { provide } from 'inversify-binding-decorators'
 
 import Settings from '../../config/settings'
+import { Command } from '../../interfaces'
 
 const { prefix } = Settings
-
-// TODO: extract this interface
-export interface Command {
-  name: string
-  description: string
-  execute: (message: Message, args: string[]) => void
-}
 
 @provide(CommandHandler)
 export class CommandHandler {

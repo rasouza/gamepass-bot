@@ -4,6 +4,7 @@ import { provide } from 'inversify-binding-decorators'
 import { isEmpty } from 'lodash'
 import { Logger } from 'winston'
 
+import { SyncHandler } from '../../interfaces'
 import {
   EnrichGames,
   FetchList,
@@ -12,14 +13,8 @@ import {
   DeleteGames
 } from '../../usecases'
 
-// TODO: Extract this interface
-interface Sync {
-  insert(): void
-  clean(): void
-}
-
 @provide(XboxSync)
-export class XboxSync implements Sync {
+export class XboxSync implements SyncHandler {
   private xboxList: Promise<string[]>
   private dbList: Promise<string[]>
 

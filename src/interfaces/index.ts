@@ -1,2 +1,3 @@
-export * from './discord.interface'
-export * from './xbox.interface'
+export * from './xbox'
+export * from './syncHandler'
+export * from './commandHandler'
