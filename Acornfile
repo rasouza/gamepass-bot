@@ -1,0 +1,23 @@
+containers: {
+    bot: {
+        build: "."
+        env: {
+            "SUPABASE_URL": "https://litmkvlgrewnorrjcxkm.supabase.co"
+            "SUPABASE_KEY": "secret://gamepass-secrets/supabase"
+            "DISCORD_TOKEN": "secret://gamepass-secrets/discord"
+        }
+    }
+}
+
+jobs: {
+    sync: {
+        build: "."
+        env: {
+            "SUPABASE_URL": "https://litmkvlgrewnorrjcxkm.supabase.co"
+            "SUPABASE_KEY": "secret://gamepass-secrets/supabase"
+            "DISCORD_TOKEN": "secret://gamepass-secrets/discord"
+        }
+        command: ["node","infrastructure/sync.js"]
+        schedule: "@hourly"
+    }
+}
