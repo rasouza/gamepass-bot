@@ -5,12 +5,13 @@ import { Logger } from 'winston'
 
 import Settings from '../../../config/settings'
 import { SubscriptionDB } from '../../../infrastructure/db'
+import { Command } from '../../../interfaces'
 
 const { username, avatarURL } = Settings
 
 @provide('Command', true)
 @provide(SubscribeCommand, true)
-export class SubscribeCommand {
+export class SubscribeCommand implements Command {
   public name = 'subscribe'
   public description = 'Subscribe channel for game offers'
 

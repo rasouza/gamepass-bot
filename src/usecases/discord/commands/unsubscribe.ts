@@ -5,12 +5,13 @@ import { Logger } from 'winston'
 
 import Settings from '../../../config/settings'
 import { SubscriptionDB } from '../../../infrastructure/db'
+import { Command } from '../../../interfaces'
 
 const { username } = Settings
 
 @provide('Command', true)
 @provide(UnsubscribeCommand, true)
-export class UnsubscribeCommand {
+export class UnsubscribeCommand implements Command {
   public name = 'unsubscribe'
   public description = 'Unsubscribe channel for game offers'
 
