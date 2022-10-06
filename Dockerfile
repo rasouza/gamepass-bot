@@ -1,14 +1,28 @@
 ARG NODE_VERSION=16
 ARG APP_DIR=/app
 
+FROM node:$NODE_VERSION AS build
+
+# Install dependencies
+WORKDIR /build
+COPY package.json yarn.lock .
+RUN yarn install
+
+# Copy source code
+COPY tsconfig.json .
+COPY src/ src/
+
+# Transpile Typescript
+RUN yarn build
+
+# Runtime stage
 FROM node:$NODE_VERSION
 
 ARG APP_DIR
 WORKDIR $APP_DIR
 
 RUN npm install pm2 -g
-COPY dist/ .
-COPY package.json .
+COPY --from=build /build/node_modules node_modules
+COPY --from=build /build/dist/ .
 
-RUN yarn --production --force
-CMD ["pm2-runtime", "bot.js"]
+CMD ["pm2-runtime", "infrastructure/bot.js"]

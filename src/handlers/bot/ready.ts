@@ -16,22 +16,21 @@ export class ReadyHandler {
     @inject('Logger') private logger: Logger
   ) {}
 
-  public run() {
-    this.onInsertXbox.execute((game: Game) =>
-      this.broadcast.execute(
-        'xbox',
+  private broadcastFor(type: string) {
+    const me = this
+    return function (game: Game) {
+      me.broadcast.execute(
+        type,
         'A new game has arrived!',
-        this.gameEmbed.show(game)
+        me.gameEmbed.show(game)
       )
-    )
+    }
+  }
 
-    this.onInsertEpic.execute((game: Game) => {
-      this.broadcast.execute(
-        'epic',
-        'A new game has arrived!',
-        this.gameEmbed.show(game)
-      )
-    })
+  public run() {
+    this.onInsertXbox.execute(this.broadcastFor('xbox'))
+    this.onInsertEpic.execute(this.broadcastFor('epic'))
+
     this.logger.info('Bot is ready!')
   }
 }
