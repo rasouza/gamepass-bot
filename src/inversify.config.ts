@@ -23,8 +23,10 @@ container
   .toFactory<AxiosInstance, [string, string]>(axiosFactory)
 
 // Bindings
-container.bind<Client>(Client).toConstantValue(createDiscord())
-container.bind<SupabaseClient>(SupabaseClient).toConstantValue(createSupabase())
+container.bind<Client>(Client).toDynamicValue(() => createDiscord())
+container
+  .bind<SupabaseClient>(SupabaseClient)
+  .toDynamicValue(() => createSupabase())
 container.bind<WinstonLogger>('Logger').toConstantValue(Logger)
 
 // Custom Clients
